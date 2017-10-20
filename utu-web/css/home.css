@@ -1,0 +1,22 @@
+.toolBar{
+    height: 60px;
+    width: 100%;
+
+}
+.toolBar a{
+    font-size: 14px;
+    color: #333;
+}
+.navButton{
+    /*background-color: orange;*/
+    border:0px;
+}
+.navButton:hover{
+
+    background-color: white;
+}
+.navButton:hover a{
+    color: #497fca;
+    border-bottom: 2px solid #497fca;
+
+}
