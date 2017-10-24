@@ -2,27 +2,221 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>友途网-Web</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/home.css">
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/power-slider.js"></script>
 </head>
 <body>
-<ul class="nav nav-default navbar-fixed-top toolBar">
-    <li  class="navButton active" ><a href="#">首页</a></li>
-    <li role="presentation" class="navButton"><a href="#">用户体验</a></li>
-    <li role="presentation"><a href="#">商业模式</a></li>
-    <li role="presentation"><a href="#">热门导游推荐</a></li>
-    <li role="presentation"><a href="#">游前管理</a></li>
-    <li role="presentation"><a href="#">友途关键词</a></li>
-    <li role="presentation"><a href="#">关于我们</a></li>
-</ul>
-    <div class="container">
+     <nav class="navgation">
+         <img src="images/nav_logo.png">
+         <div class="navButton"  ><a  href="#" id="a1">首页</a></div>
+         <div class="navButton" ><a href="#" id="a2">用户体验</a></div>
+         <div class="navButton" ><a href="#"id="a3">商业模式</a></div>
+         <div class="navButton" ><a href="#" id="a4">热门导航</a></div>
+         <div class="navButton" ><a href="#" id="a5">游前管理</a></div>
+         <div class="navButton" ><a href="#" id="a6">友途关键词</a></div>
+         <div class="navButton" ><a href="#" id="a7">关于我们</a></div>
+     </nav>
+     <div id="row1" class="row1">
+         <div class="swiper-container"  >
+             <div class="swiper-wrapper">
+                 <div class="swiper-slide"><img src="images/banner1.png" class="banner_img" alt="图片加载失败"/></div>
+                 <div class="swiper-slide"><img src="images/banner1.png" class="banner_img"  alt="图片加载失败"/></div>
+                 <div class="swiper-slide"><img src="images/banner1.png" class="banner_img" alt="图片加载失败"/></div>
+             </div>
 
-    </div>
+             <!--如果需要分页器-->
+             <div class="swiper-pagination" ></div>
+
+             <!-- 如果需要导航按钮 -->
+             <!--<div class="swiper-button-prev swiper-button-white " ></div>-->
+             <!--<div class="swiper-button-next swiper-button-white"></div>-->
+
+             <!--如果需要滚动条-->
+             <!--<div class="swiper-scrollbar"></div>-->
+         </div>
+     </div>
+     <div class="row2" id="row2">
+        <div class="row2_left">
+             <div>Project Significance</div>
+             <div>友途&用户</div>
+             <div></div>
+             <div>友途为用户提供海量导游，同时友途的所有线上流程，包括导游定价，用户选择，预约导游等，均公开、透明保证用户下订单的安全性</div>
+        </div>
+         <div class="row2_center">
+             <div>
+                <img src="images/video_play.png">
+             </div>
+         </div>
+         <div class="row2_right">
+             <div>Project Significance</div>
+             <div>友途&乐游</div>
+             <div></div>
+             <div>友途为用户提供海量导游，同时友途的所有线上流程，包括导游定价，用户选择，预约导游等，均公开、透明保证用户下订单的安全性</div>
+         </div>
+     </div>
+     <div class="seperateView">
+         <div><p>用户体验<span>User Experience</span></p></div>
+     </div>
+     <div class="row3">
+         <div>
+             <img src="images/user_experice_left.png">
+             <img src="images/user_experice_right.png">
+         </div>
+     </div>
+     <div class="row4_bg">
+         <div class="seperateView" >
+             <div><p>商业模式<span>Bussiness Model</span></p></div>
+         </div>
+         <div class="row4">
+             <img src="images/business_bg1.png" class="business_pre">
+             <div class="slider" id="img">
+                 <ul class="sliderbox">
+                     <li class="">
+                         <a href=""><img src="images/business_bg2.png" alt=""/></a>
+                     </li>
+                     <li>
+                         <a href=""><img src="images/business_bg3.png" alt="HTML代码"/></a>
+                     </li>
+                     <li >
+                         <a href=""><img src="images/business_bg4.png" alt="HTML代码"/></a>
+                     </li>
+                     <li >
+                         <a href=""><img src="images/business_bg5.png" alt="HTML代码"/></a>
+                     </li>
+                     <li >
+                         <a href=""><img src="images/business_bg6.png" alt="HTML代码"/></a>
+                     </li>
+                     <li>
+                         <a href=""><img src="images/business_bg7.png" alt="HTML代码"/></a>
+                     </li>
+                 </ul>
+                 <!--/*显示数字导航，非必须*/-->
+                 <!--<ul class="slidernav"></ul>-->
+                 <!--/*显示上一页，非必须*/-->
+                 <div class="prev"></div>
+                 <!--/*显示下一页，非必须*/-->
+                 <div class="next"></div>
+             </div>
+             <img src="images/business_bg8.png" class="business_next">
+         </div>
+
+     </div>
+     <div class="seperateView" >
+         <div><p>热门导游推荐<span>Hot Tour Guide Recommended</span></p></div>
+     </div>
+     <div class="row5">
+         <div>
+             <div class="cell">
+                 <img src="images/guide1.png">
+             </div>
+         </div>
+     </div>
+
 
 </body>
+<script>
+     function bindHover (paramenter) {
+        $(paramenter).bind({
+            mouseenter: function(e) {
+                // Hover event handler
+                var id = "#"+$(this).children("a").attr("id")
+                $(id).css("color","#498fca");
+                $(this).css("border-bottom","2px solid #498fca");
+            },
+            mouseleave: function(e) {
+                // Hover event handler
+                var id = "#"+$(this).children("a").attr("id")
+                $(id).css("color","#333");
+                $(this).css("border-bottom","0px");
+            }})
+    }
+    bindHover(".navButton")
+
+    var selectedId = "#a1";
+    $(".navButton:first").css("background-color","#498fca")
+    $(".navButton:first").css("pointer-events","none")
+    $(selectedId).css("color","#fff")
+    $(document).ready(function(){
+        $(".navButton").click(function(){
+
+            $(this).unbind('mouseenter').unbind('mouseleave');
+
+            var parent = $(selectedId).parent()
+            bindHover(parent)
+            parent.css("background-color","#fff")
+            parent.css("pointer-events","auto")
+            $(selectedId).css("color","#333")
+
+            $(this).css("pointer-events","none")
+            $(this).css("background-color","#498fca")
+            var id = "#"+$(this).children("a").attr("id")
+            $(id).css("color","#fff")
+            selectedId = id
+
+        });
+    });
+//    $(window).scroll(function(event){
+//        var scrollHeight = $(window).scrollTop()//窗口已经滚动的距离
+//        var toolBarHeight = $(".toolBar").height()
+//        var row4Height = $("#row4").offset().top -toolBarHeight//元素相对于窗口的距离
+//        var row5Height = $("#row5").offset().top-toolBarHeight
+//        var footerHeight = $("#footer").offset().top -toolBarHeight
+//
+//        if(scrollHeight < row4Height)
+//        {
+////                        alert("滚动到指定位置")
+//            $(selectedId).css("color","#fff")
+//            $("#a1").css("color","#d54e39");
+//            selectedId = "#a1";
+//        }else if (scrollHeight < row5Height)
+//        {
+////                        alert("滚动到指定位置")
+//            $(selectedId).css("color","#fff")
+//            $("#a2").css("color","#d54e39");
+//            selectedId = "#a2";
+//
+//        }else
+//        {
+//            //            alert("滚动到指定位置")
+//            $(selectedId).css("color","#fff")
+//            $("#a3").css("color","#d54e39");
+//            selectedId = "#a3";
+//        }
+//
+//
+//
+//    });
+
+    //    <!--修改轮播图-->
+    var mySwiper = new Swiper('.swiper-container', {
+        //direction: 'vertical',
+        loop: true,
+
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+
+        // 如果需要前进后退按钮
+        //        nextButton: '.swiper-button-next',
+        //        prevButton: '.swiper-button-prev',
+
+        // 如果需要滚动条
+        //        scrollbar: '.swiper-scrollbar',
+
+        autoplay:3000,
+
+        speed:1000,
+
+        paginationClickable :true,
+    })
+//   多图轮播
+     $("#img").powerSlider({handle:"left",sliderNum:5});
+</script>
 </html>
