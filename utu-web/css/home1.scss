@@ -53,8 +53,14 @@ p{
 .row2{
   width: 100%;
   min-width: 1000px;
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1600px){
     height: 450px;
+  }
+  @media (min-width: 1300px) and (max-width: 1600px){
+    height: 350px;
+  }
+  @media (min-width: 1000px) and (max-width: 1300px){
+    height: 300px;
   }
   @media screen and (max-width: 1000px){
     height: 233px;
@@ -76,9 +82,17 @@ p{
 .row2_left div:first-child,.row2_right div:first-child{
 
   color: #fff;
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1600px){
     font-size: 18px;
     padding-top: 60px;
+  }
+  @media (min-width: 1300px) and (max-width: 1600px){
+    font-size: 15px;
+    padding-top: 50px;
+  }
+  @media (min-width: 1000px) and (max-width: 1300px){
+    font-size: 12px;
+    padding-top: 40px;
   }
   @media screen and (max-width: 1000px){
     font-size: 9px;
@@ -88,8 +102,15 @@ p{
 }
 .row2_left div:nth-child(2),.row2_right div:nth-child(2){
   //font-size: 36px;
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1600px){
     font-size: 36px;
+  }
+  @media (min-width: 1300px) and (max-width: 1600px){
+    font-size: 30px;
+  }
+  @media (min-width: 1000px) and (max-width: 1300px){
+    font-size: 24px;
+
   }
   @media screen and (max-width: 1000px){
     font-size: 18px;
@@ -102,26 +123,44 @@ p{
   width: 9.3%;
   height: 2px;
   //margin-top: 15px;
-  @media screen and (min-width: 1000px){
+
+  @media screen and (min-width: 1600px){
     margin-top: 15px;
+  }
+  @media (min-width: 1300px) and (max-width: 1600px){
+    margin-top: 12px;
+  }
+  @media (min-width: 1000px) and (max-width: 1300px){
+    margin-top: 10px;
+
   }
   @media screen and (max-width: 1000px){
     margin-top: 7px;
   }
 }
 .row2_left div:last-child,.row2_right div:last-child{
-  //margin-left: 65px;
-  //margin-right: 65px;
-  //font-size: 20px;
   color: #fff;
-  //margin-top: 22px;
-  //line-height: 36px;
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1600px){
     margin-top: 22px;
     line-height: 36px;
     margin-left: 65px;
     margin-right: 65px;
     font-size: 20px;
+  }
+  @media (min-width: 1300px) and (max-width: 1600px){
+    margin-top: 18px;
+    line-height: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 16px;
+  }
+  @media (min-width: 1000px) and (max-width: 1300px){
+    margin-top: 15px;
+    line-height: 25px;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 13px;
+
   }
   @media screen and (max-width: 1000px){
     margin-top: 12px;
@@ -159,9 +198,17 @@ p{
 .seperateView{
   width: 100%;
   min-width: 1000px;
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1600px){
     height: 46px;
     margin-top: 28px;
+  }
+  @media (min-width: 1300px) and (max-width: 1600px){
+    height: 40px;
+    margin-top: 24px;
+  }
+  @media (min-width: 1000px) and (max-width: 1300px){
+    height: 35px;
+    margin-top: 20px;
   }
   @media screen and (max-width: 1000px){
     height: 30px;
@@ -182,9 +229,17 @@ p{
 }
 .seperateView>div>p{
   color: #333333;
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1600px){
     font-size: 24px;
     line-height: 42px;
+  }
+  @media (min-width: 1300px) and (max-width: 1600px){
+    font-size: 21px;
+    line-height: 36px;
+  }
+  @media (min-width: 1000px) and (max-width: 1300px){
+    font-size: 18px;
+    line-height: 32px;
   }
   @media screen and (max-width: 1000px){
     font-size: 15px;
@@ -195,9 +250,17 @@ p{
 .seperateView>div>p>span{
   color: #333333;
 
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1600px){
     font-size: 18px;
     margin-left: 20px;
+  }
+  @media (min-width: 1300px) and (max-width: 1600px){
+    font-size: 16px;
+    margin-left: 16px;
+  }
+  @media (min-width: 1000px) and (max-width: 1300px){
+    font-size: 14px;
+    margin-left: 13px;
   }
   @media screen and (max-width: 1000px){
     font-size: 12px;
@@ -207,8 +270,14 @@ p{
 }
 .row3{
 
-  @media screen and (min-width: 1000px){
+  @media screen and (min-width: 1600px){
     margin-top: 28px;
+  }
+  @media (min-width: 1300px) and (max-width: 1600px){
+    margin-top: 24px;
+  }
+  @media (min-width: 1000px) and (max-width: 1300px){
+    margin-top: 20px;
   }
   @media screen and (max-width: 1000px){
     margin-top: 16px;
@@ -227,13 +296,17 @@ p{
   display: flex;
 }
 .row3 img{
-
-  @media screen and (min-width: 1000px){
-    width: 50%;
+  width: 50%;
+  @media screen and (min-width: 1600px){
     height: 484px;
   }
+  @media (min-width: 1300px) and (max-width: 1600px){
+    height: 400px;
+  }
+  @media (min-width: 1000px) and (max-width: 1300px){
+    height: 320px;
+  }
   @media screen and (max-width: 1000px){
-    width: 50%;
     height: 250px;
   }
 }
@@ -308,11 +381,12 @@ p{
 .cell{
 
   height: auto;
-  /*background-color: #5cb85c;*/
+  //background-color: #5cb85c;
   float: left;
   @media screen and (min-width: 1000px){
     margin-top: 44px;
-    width: 460px;
+    //width: 460px;
+    width: 32%;
   }
   @media screen and (max-width: 1000px){
     margin-top: 20px;
@@ -322,7 +396,8 @@ p{
 .cell_margin{
 
   @media screen and (min-width: 1000px){
-    margin-right: 35px;
+    //margin-right: 35px;
+    margin-right: 2%;
   }
   @media screen and (max-width: 1000px){
     margin-right: 13px;
@@ -332,7 +407,7 @@ p{
 
   margin: 0px;
   @media screen and (min-width: 1000px){
-    width: 460px;
+    width: 100%;
     height: 330px;
   }
   @media screen and (max-width: 1000px){
@@ -424,21 +499,44 @@ p{
   margin-top: 5px;
 }
 .insert_img{
-  margin-top: 60px;
+
+  @media screen and (min-width: 1000px){
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  @media screen and (max-width: 1000px){
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  //background-color: orange;
+  min-width: 1000px;
+
 
 }
 .insert_img img{
-  width: 1450px;
-  height: 360px;
+
+  @media screen and (min-width: 1000px){
+    width: 1450px;
+    height: 360px;
+  }
+  @media screen and (max-width: 1000px){
+    width: 750px;
+    height: 186px;
+  }
 }
 .row6_bg{
   background-color: #d1d1d1;
   width: 100%;
   /*height: 540px;*/
-  margin-top: 75px;
+  min-width: 1000px;
+  @media screen and (min-width: 1000px){
+    margin-top: 75px;
+  }
+  @media screen and (max-width: 1000px){
+    margin-top: 40px;
+  }
   padding-top: 1px;
   display: flex;
   flex-direction: column;
@@ -446,44 +544,111 @@ p{
 }
 .row6{
   width: 75%;
-  margin-top: 20px;
-  margin-bottom: 80px;
+  background-color: orange;
+  @media screen and (min-width: 1000px){
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+  @media screen and (max-width: 1000px){
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
 }
 .row6 img{
   float: left;
+  @media screen and (min-width: 1000px){
+    width:20%;
+    height: 360px;
+  }
+  @media screen and (max-width: 1000px){
+    width:150px;
+    height: 186px;
+  }
 }
 .row7{
   width: 100%;
   overflow: hidden;
-  margin-bottom: 90px;
+
+  @media screen and (min-width: 1000px){
+    margin-bottom: 90px;
+  }
+  @media screen and (max-width: 1000px){
+    margin-bottom: 50px;
+  }
 
 
 }
 .row7 div{
-  margin-top: 46px;
+  min-width: 1000px;
+  @media screen and (min-width: 1000px){
+    margin-top: 46px;
+  }
+  @media screen and (max-width: 1000px){
+    margin-top: 26px;
+  }
 }
 .row7 img{
   float: left;
   margin: 0px;
+  @media screen and (min-width: 1000px){
+    width: 33.3%;
+    height: 450px;
+  }
+  @media screen and (max-width: 1000px){
+    width: 333px;
+    height: 234px;
+  }
 }
 .row8{
-  margin-top: 80px;
+  min-width: 1000px;
+  @media screen and (min-width: 1000px){
+    margin-top: 80px;
+  }
+  @media screen and (max-width: 1000px){
+    margin-top: 50px;
+  }
 }
 .row8 div{
+  min-width: 1000px;
   height: 100%;
   display: flex;
   justify-content: center;
+
+}
+.row8>div>img{
+  @media screen and (min-width: 1000px){
+    width: 37.5%;
+    height: 450px;
+  }
+  @media screen and (max-width: 1000px){
+    width: 375px;
+    height: 225px;
+  }
 }
 .fooder{
+  min-width: 1000px;
   width: 100%;
   height: auto;
-  margin-top: 80px;
-  margin-bottom: 10px;
+
+  @media screen and (min-width: 1000px){
+    margin-top: 80px;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 1000px){
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .fooder p{
-  font-size: 20px;
+
+  @media screen and (min-width: 1000px){
+    font-size: 20px;
+  }
+  @media screen and (max-width: 1000px){
+    font-size: 13px;
+  }
   color: #333;
 }
