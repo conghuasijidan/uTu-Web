@@ -59,11 +59,24 @@
   cursor: pointer;
   background: url(../images/left_arrow.png);
   /*text-indent: -9999px;*/ }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1600px) {
     .slider .prev, .slider .next {
-      margin-top: -42px;
-      width: 44px;
-      height: 85px; } }
+      margin-top: -21px;
+      width: 22px;
+      height: 42px;
+      background-size: 22px 42px; } }
+  @media (min-width: 1300px) and (max-width: 1600px) {
+    .slider .prev, .slider .next {
+      margin-top: -21px;
+      width: 22px;
+      height: 42px;
+      background-size: 22px 42px; } }
+  @media (min-width: 1000px) and (max-width: 1300px) {
+    .slider .prev, .slider .next {
+      margin-top: -21px;
+      width: 22px;
+      height: 42px;
+      background-size: 22px 42px; } }
   @media screen and (max-width: 1000px) {
     .slider .prev, .slider .next {
       margin-top: -21px;
