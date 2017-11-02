@@ -301,22 +301,21 @@ p {
       margin-top: 75px; } }
   @media (min-width: 1300px) and (max-width: 1600px) {
     .row4_bg {
-      height: 480px;
+      height: 430px;
       margin-top: 65px; } }
   @media (min-width: 1000px) and (max-width: 1300px) {
     .row4_bg {
-      height: 400px;
+      height: 340px;
       margin-top: 55px; } }
   @media screen and (max-width: 1000px) {
     .row4_bg {
-      height: 320px;
+      height: 300px;
       margin-top: 45px; } }
 
 .row4 {
   width: 100%;
   min-width: 1000px;
-  display: flex;
-  background-color: orange; }
+  display: flex; }
   @media screen and (min-width: 1600px) {
     .row4 {
       margin-top: 20px;
@@ -334,22 +333,27 @@ p {
       margin-top: 12px;
       height: 191px; } }
 
-@media screen and (min-width: 1600px) {
-  .business_next, .business_pre {
-    width: 235px;
-    height: 360px; } }
-@media (min-width: 1300px) and (max-width: 1600px) {
-  .business_next, .business_pre {
-    width: 200px;
-    height: 300px; } }
-@media (min-width: 1000px) and (max-width: 1300px) {
-  .business_next, .business_pre {
-    width: 160px;
-    height: 250px; } }
-@media screen and (max-width: 1000px) {
-  .business_next, .business_pre {
-    width: 125px;
-    height: 191px; } }
+.slider_mutiple {
+  width: 75%;
+  height: 100%; }
+
+.business_pre {
+  width: 12.5%;
+  height: 100%;
+  background: oldlace;
+  background-image: url("../images/business_bg1.png");
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.business_next {
+  width: 12.5%;
+  height: 100%;
+  background: oldlace;
+  background-image: url("../images/business_bg8.png");
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 @media screen and (min-width: 1600px) {
   .business_img {
@@ -357,12 +361,12 @@ p {
     height: 360px; } }
 @media (min-width: 1300px) and (max-width: 1600px) {
   .business_img {
-    width: 250px;
-    height: 300px; } }
+    width: 240px;
+    height: 298px; } }
 @media (min-width: 1000px) and (max-width: 1300px) {
   .business_img {
-    width: 200px;
-    height: 250px; } }
+    width: 195px;
+    height: 242px; } }
 @media screen and (max-width: 1000px) {
   .business_img {
     width: 150px;

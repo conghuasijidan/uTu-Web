@@ -320,15 +320,15 @@ p{
     margin-top: 75px;
   }
   @media (min-width: 1300px) and (max-width: 1600px){
-    height: 480px;
+    height: 430px;
     margin-top: 65px;
   }
   @media (min-width: 1000px) and (max-width: 1300px){
-    height: 400px;
+    height: 340px;
     margin-top: 55px;
   }
   @media screen and (max-width: 1000px){
-    height: 320px;
+    height: 300px;
     margin-top: 45px;
   }
   padding-top: 1px;
@@ -337,7 +337,9 @@ p{
   width: 100%;
   min-width: 1000px;
   display: flex;
-  background-color: orange;
+  //justify-content: center;
+  //align-items: center;
+  //background-color: orange;
   @media screen and (min-width: 1600px){
     margin-top: 20px;
     height: 360px;
@@ -355,26 +357,44 @@ p{
     height: 191px;
   }
 }
+.slider_mutiple{
+  width: 75%;
+  height: 100%;
+}
+.business_pre{
 
-.business_next,.business_pre{
-
-  @media screen and (min-width: 1600px){
-    width: 235px;
-    height: 360px;
-  }
-  @media (min-width: 1300px) and (max-width: 1600px){
-    width: 200px;
-    height: 300px;
-  }
-  @media (min-width: 1000px) and (max-width: 1300px){
-    width: 160px;
-    height: 250px;
-  }
-  @media screen and (max-width: 1000px){
-    width: 125px;
-    height: 191px;
-  }
-
+  width:12.5%;
+  height: 100%;
+  background: oldlace;
+  background-image: url("../images/business_bg1.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //@media screen and (min-width: 1600px){
+  //  width: 235px;
+  //  height: 360px;
+  //}
+  //@media (min-width: 1300px) and (max-width: 1600px){
+  //  width: 200px;
+  //  height: 298px;
+  //}
+  //@media (min-width: 1000px) and (max-width: 1300px){
+  //  width: 162px;
+  //  height: 242px;
+  //}
+  //@media screen and (max-width: 1000px){
+  //  width: 125px;
+  //  height: 191px;
+  //}
+}
+.business_next{
+  width:12.5%;
+  height: 100%;
+  background: oldlace;
+  background-image: url("../images/business_bg8.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .business_img{
 
@@ -383,12 +403,12 @@ p{
     height: 360px;
   }
   @media (min-width: 1300px) and (max-width: 1600px){
-    width: 250px;
-    height: 300px;
+    width: 240px;
+    height: 298px;
   }
   @media (min-width: 1000px) and (max-width: 1300px){
-    width: 200px;
-    height: 250px;
+    width: 195px;
+    height: 242px;
   }
   @media screen and (max-width: 1000px){
     width: 150px;
