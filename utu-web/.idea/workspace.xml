@@ -18,22 +18,10 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="47" lean-forward="false" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+            <state relative-caret-position="391">
+              <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
               <folding>
                 <element signature="n#style#0;n#video#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="swiper.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/swiper.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#4156#4414#2" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,8 +30,8 @@
       <file leaf-file-name="home1.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/home1.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="390" column="14" lean-forward="false" selection-start-line="390" selection-start-column="14" selection-end-line="390" selection-end-column="14" />
+            <state relative-caret-position="1266">
+              <caret line="405" column="40" lean-forward="true" selection-start-line="405" selection-start-column="40" selection-end-line="405" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -68,6 +56,8 @@
       <find>btr</find>
       <find>swiper-button-prev</find>
       <find>swiper-container</find>
+      <find>banner_img</find>
+      <find>swiper-slide</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -78,9 +68,9 @@
         <option value="$PROJECT_DIR$/css/slider.css" />
         <option value="$PROJECT_DIR$/js/mySystem.js" />
         <option value="$PROJECT_DIR$/css/slider.scss" />
-        <option value="$PROJECT_DIR$/css/swiper.scss" />
         <option value="$PROJECT_DIR$/css/home1.scss" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/swiper.scss" />
       </list>
     </option>
   </component>
@@ -288,15 +278,15 @@
       <workItem from="1508750547163" duration="17620000" />
       <workItem from="1508980679165" duration="32305000" />
       <workItem from="1509088160964" duration="25265000" />
-      <workItem from="1509587643474" duration="18315000" />
+      <workItem from="1509587643474" duration="20249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117462000" />
+    <option name="totallyTimeSpent" value="119396000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="21" y="-1054" width="1238" height="975" extended-state="1" />
+    <frame x="21" y="-1054" width="1238" height="975" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2980614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -584,28 +574,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/swiper.scss">
+    <entry file="file://$PROJECT_DIR$/css/home1.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#4156#4414#2" expanded="true" />
-          </folding>
+        <state relative-caret-position="1266">
+          <caret line="405" column="40" lean-forward="true" selection-start-line="405" selection-start-column="40" selection-end-line="405" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/home1.scss">
+    <entry file="file://$PROJECT_DIR$/css/swiper.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="390" column="14" lean-forward="false" selection-start-line="390" selection-start-column="14" selection-end-line="390" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="360">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <element signature="e#4157#4415#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="47" lean-forward="false" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+        <state relative-caret-position="391">
+          <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
           <folding>
             <element signature="n#style#0;n#video#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
