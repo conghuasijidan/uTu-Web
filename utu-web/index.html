@@ -12,17 +12,32 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
     <script src="js/video.min.js" type="text/javascript"></script>
+
 </head>
 <body>
      <nav class="navgation" >
-         <img src="images/nav_logo.png">
-         <div class="navButton" ><a  href="#row1" id="a1">首页</a></div>
-         <div class="navButton" ><a href="#row2" id="a2">用户体验</a></div>
-         <div class="navButton" ><a href="#row3" id="a3">商业模式</a></div>
-         <div class="navButton" ><a href="#row4" id="a4">热门导游</a></div>
-         <div class="navButton" ><a href="#row5" id="a5">游前管理</a></div>
-         <div class="navButton" ><a href="#row6" id="a6">友途关键词</a></div>
-         <div class="navButton" ><a href="#row7" id="a7">关于我们</a></div>
+         <img src="images/nav_logo.png" class="logo">
+         <div class="navButton first" ><a  href="#row1" id="a1">首页</a></div>
+         <div class="navButton" ><a href="#row2" id="a2">旅行纪念</a></div>
+         <div class="navButton" ><a href="#row3" id="a3">旅行管家</a></div>
+         <div class="navButton" ><a href="#row4" id="a4">关于我们</a></div>
+         <div class="navButton" ><a href="#row5" id="a5">成为途友</a></div>
+         <div class="last" >
+             <!--<a href="#" id="a6">请登录</a>-->
+             <div class="avatarView">
+                 <img src="images/avatar.png" class="avatarimg">
+                 <span>接地气啊</span>
+                 <div class="arrowimg"></div>
+             </div>
+             <div class="submenu">
+                 <ul>
+                     <li>旅行纪念订单</li>
+                     <li>旅行管家订单</li>
+                     <li>设置</li>
+                     <li>退出</li>
+                 </ul>
+             </div>
+         </div>
      </nav>
      <div  class="row1" id="row1">
          <div class="swiper-container"  >
@@ -215,18 +230,50 @@
 </body>
 
 <script>
-//    $.ajax({
-//        type: "get",
-//        url: "https://piaogood.com/1.0/guidev2",
-//        success: function() {
-//            alert('录入成功 success');
-//        },
-//        error:function (e) {
-//            alert('输入格式错误');
-//            alert(e.responseText);
-//        }
-//
-//    }) ;
+    $(".avatarView").mouseenter(function () {
+          submenu()
+
+    })
+    $(".avatarView").mouseleave(function (e) {
+        var direction = moveDirection(this,e);
+        if(direction != 2 )
+        {
+            submenuHover()
+        }
+    })
+    $(".submenu").mouseleave(function (e) {
+        
+        submenuHover()
+
+
+    })
+    function submenu() {
+        var left = $(".avatarView").offset().left;
+        $(".avatarView").css({'background-color':'#ffffff'})
+        $(".avatarView").children('span').css('color','#498fca')
+        $(".avatarView").children('div').attr('class','arrowimg-hover')
+        $('.submenu').css({'left':left,'display':'block'});
+    }
+    function submenuHover() {
+        $(".avatarView").css({'background-color':'#f7f7f7'})
+        $(".avatarView").children('span').css('color','#333')
+        $(".avatarView").children('div').attr('class','arrowimg')
+        $('.submenu').css('display','none');
+    }
+    /**
+     * 判断鼠标从哪个方向进入和离开容器
+     * @param {Object} tag JQuery对象，事件绑定的主体
+     * @param {Object} e event对象
+     * @return {Number} direction 值为“0,1,2,3”分别对应着“上，右，下，左”
+     */
+    function moveDirection(tag,e){
+        var w = $(tag).width();
+        var h = $(tag).height();
+        var x = (e.pageX - tag.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);
+        var y = (e.pageY - tag.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
+        var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
+        return direction;
+    }
 
      function bindChange (paramenter) {
         $(paramenter).bind({
@@ -263,13 +310,16 @@
     $(selectedId).css("color","#fff")
     $(document).ready(function(){
         $(".navButton").click(function(){
-
+            var id = "#"+$(this).children("a").attr("id")
+            if(id == "#a6")
+            {
+                return;
+            }
             var parent = $(selectedId).parent()
             parent.css({"background-color":"#fff","border-bottom":"0px","pointer-events":"auto"})
             $(selectedId).css("color","#333")
 
             $(this).css({"pointer-events":"none","background-color":"#498fca"})
-            var id = "#"+$(this).children("a").attr("id")
             $(id).css("color","#fff")
             selectedId = id
 
@@ -323,7 +373,7 @@
         {
             scrollChange("#a5")
         }else {
-            scrollChange("#a6")
+//            scrollChange("#a6")
         }
 
     });
