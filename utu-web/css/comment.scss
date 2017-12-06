@@ -1,0 +1,146 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #f7f7f7;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.content{
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding-left: 36px;
+  padding-right: 36px;
+  display: flex;
+  flex-direction: column;
+
+}
+.orderInfo{
+  width: 750px;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  margin: 16px 0px 20px 0px;
+  border: 1px solid #e5e5e5;
+}
+.orderInfo img{
+  width: 240px;
+  height: 180px;
+  margin-left: 20px;
+}
+.info{
+  margin-right: 30px;
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  //height: 180px;
+  //background-color: orange;
+  margin-left: 30px;
+
+}
+.info span{
+  font-size: 20px;
+}
+.info span:first-of-type{
+  color: #333333;
+  margin-bottom: 10px;
+}
+.info span:last-of-type{
+  color: #666;
+}
+.desc{
+  color: #999;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.impress,.star{
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  //background-color: orange;
+}
+.impress span,.star span{
+  font-size: 18px;
+  color: #666666;
+}
+.attitude{
+  display: flex;
+}
+.attitude div{
+  padding: 0px 10px 0px 10px;
+  border: 1px solid #e6e6e6;
+  margin-right: 20px;
+  color: #999999;
+  font-size: 16px;
+}
+.starImg{
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+
+}
+.starImg img{
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.comtool{
+  width: 750px;
+  height: 60px;
+  background-color: #f7f7f7;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+}
+.upload{
+  width: 64px;
+  height: 34px;
+  background-color: #498fca;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.comtool span{
+  font-size: 16px;
+  color: #999999;
+}
+.commentContent{
+  border: 1px solid #f7f7f7;
+  border-top: 0px;
+  width: 730px;
+  height: 160px;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.noti{
+  font-size: 16px;
+  color: #999999;
+  margin-top: 10px;
+}
+.button{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  // 原先30
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.modifyButton{
+  width: 150px;
+  height: 40px;
+  background-color: #498fca;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
