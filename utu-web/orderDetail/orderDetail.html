@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <link href="../css/orderDetail.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+     <div class="container">
+         <div class="left">
+           <div class="progress">
+               <div class="circle">1</div>
+               <div class="line"></div>
+               <div class="circle">2</div>
+               <div class="line"></div>
+               <div class="circle">3</div>
+               <div class="line"></div>
+               <div class="circle">4</div>
+           </div>
+           <div class="order">
+               <div class="orderStatus">
+                   <span>订单详情</span>
+                   <span>未付款</span>
+               </div>
+               <div class="item">
+                   <span>地点</span>
+                   <span>雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔</span>
+               </div>
+               <div class="item">
+                   <span>时间</span>
+                   <span>2017-12-12 14：00-18：00</span>
+               </div>
+               <div class="item">
+                   <span>套餐</span>
+                   <span>套餐A(至少30张原图+10张精修)</span>
+               </div>
+               <div class="item">
+                   <span>合计</span>
+                   <span>198.0元</span>
+               </div>
+           </div>
+           <div class="button">
+             <div class="modifyButton">取消订单</div>
+           </div>
+         </div>
+         <div class="right">
+             <div class="cell">
+                 <img src="../images/orderDetail_photo.png" class="avatar">
+                 <div class="list1">
+                     <div class="nameView">
+                       <span>球球</span>
+                       <img src="../images/female.png" class="gender">
+                     </div>
+                     <img src="../images/star.png" class="star">
+                 </div>
+                 <div class="list2">
+                     <div class="orderCount">
+                         <img src="../images/order_icon.png" class="gender">
+                         <span>接单10次</span>
+                     </div>
+                     <span class="price">￥198元</span>
+                 </div>
+                 <span class="service">增值服务</span>
+                 <div class="serviceView">
+                     <div class="serviceItem">
+                        <img src="../images/service_check.png">
+                        <span>贴心小包</span>
+                     </div>
+                     <div class="serviceItem">
+                         <img src="../images/service_check.png">
+                         <span>购票订餐</span>
+                     </div>
+                     <div class="serviceItem">
+                         <img src="../images/service_check.png">
+                         <span>跑腿叫车</span>
+                     </div>
+                 </div>
+                 <div class="seeMore">查看更多</div>
+             </div>
+             <div class="codeView">
+                 <span>扫一扫进入友途小程序</span>
+                 <img src="../images/orderDetail_code.png">
+             </div>
+         </div>
+
+     </div>
+</body>
+<script>
+    $(".modifyButton").on('click',function () {
+        alert('取消订单')
+    })
+    $(".seeMore").on('click',function () {
+        alert('跳转到导游详情页')
+    })
+
+</script>
+</html>

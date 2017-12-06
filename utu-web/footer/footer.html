@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页脚</title>
+    <link rel="stylesheet" href="../css/footer.css">
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+  <div class="footer">
+       <div class="kefu">
+           <span>客服电话</span>
+           <span>0571-89715260</span>
+           <span>(上班时间：09：00-22：00)</span>
+       </div>
+      <div class="kefu">
+          <span >公司信息</span>
+          <span id="aboutus">关于我们</span>
+          <span id="medium">媒体报道</span>
+          <span id="team">团队介绍</span>
+      </div>
+      <div class="code">
+          <img src="../images/footer_code.png">
+          <span>友途小程序</span>
+      </div>
+  </div>
+</body>
+<script>
+    $("#aboutus").on('click',function () {
+         alert('导航到关于我们')
+    })
+    $("#medium").on('click',function () {
+        alert('导航到媒体报道')
+    })
+    $("#team").on('click',function () {
+        alert('导航到团队介绍')
+    })
+
+
+</script>
+</html>
