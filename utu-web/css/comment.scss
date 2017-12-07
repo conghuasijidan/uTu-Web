@@ -144,3 +144,79 @@ body{
   justify-content: center;
   align-items: center;
 }
+.complainItem{
+  //background-color: orange;
+  display: flex;
+  align-items: center;
+}
+.complainItem span{
+  font-size: 20px;
+  color: #333333;
+  margin-right: 14px;
+}
+ .reasonSelect{
+   width: 220px;
+   height: 30px;
+   outline: none;
+   background-color: #ffffff;
+   font-size: 18px;
+   color: #666666;
+}
+ .complainReason{
+
+   //background-color: orange;
+   display: flex;
+   margin-top: 60px;
+ }
+ .complainReason span{
+   font-size: 20px;
+   color: #333333;
+   margin-right: 10px;
+ }
+ .complainReason textarea{
+   width: 400px;
+   height: 130px;
+   margin-left: 10px;
+   border: 1px solid #e5e5e5;
+   outline: none;
+   font-size: 18px;
+   color: #333333;
+ }
+ .complainReason input{
+   margin-left: 10px;
+   width: 150px;
+   height: 30px;
+   outline: none;
+   font-size: 18px;
+   color: #333333;
+ }
+ .uploadImg{
+   border: 1px solid #e5e5e5;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 150px;
+   height: 30px;
+   font-size: 18px;
+   color: #333333;
+   margin-left: 10px;
+ }
+ .noti{
+    font-size: 14px;
+   color: #999999;
+   margin-left: 150px;
+ }
+ .submit{
+   font-size: 18px;
+   color: #ffffff;
+   background-color: #498fca;
+   border-radius: 5px;
+   width: 150px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   //margin-left: 150px;
+   //margin-top: 50px;
+   margin: 50px 0px 120px 150px ;
+ }
