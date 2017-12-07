@@ -1,0 +1,105 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f7f7f7; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; }
+
+.content {
+  width: 1200px;
+  display: flex;
+  flex-direction: column; }
+
+.resetTime {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666666;
+  font-size: 18px;
+  background-color: #ffffff; }
+
+.resetTime span {
+  color: #498fca;
+  font-size: 18px; }
+
+.pockageA {
+  margin-top: 40px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff; }
+
+.pockageB {
+  margin-top: 40px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff; }
+
+.desc {
+  font-size: 18px;
+  color: #333333;
+  margin-left: 40px; }
+
+.priceDesc {
+  font-size: 12px;
+  color: #c8466b; }
+
+.payway {
+  width: 100%;
+  height: 280px;
+  background-color: #ffffff;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column; }
+
+.chooseMethod {
+  display: flex;
+  margin-top: 40px;
+  width: 100%; }
+
+.method {
+  display: flex;
+  align-items: center;
+  margin-left: 40px; }
+
+.methodDesc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  width: 150px;
+  height: 40px;
+  margin-left: 15px; }
+
+.methodDesc span {
+  font-size: 18px;
+  color: #333333;
+  margin-left: 5px; }
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 100px; }
+
+.modifyButton {
+  width: 120px;
+  height: 40px;
+  background-color: #498fca;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px; }
+
+/*# sourceMappingURL=pay.css.map */
