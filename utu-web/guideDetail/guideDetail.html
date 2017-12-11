@@ -3,8 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <title>导游详情</title>
+    <link href="../css/guideDetail.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
+<div class="container">
+    <div class="content" id="content">
+        <div class="guideInfo">
+           <img src="../images/orderDetail_photo.png" class="guideAvatar">
+            <div class="info" id="info">
+                <div class="nameView" >
+                    <span >{{name}}</span>
+                    <img v-bind:src="img" >
 
+                </div>
+                <div class="commentLevel">
+                    <span>评价：</span>
+                    <div class="starView">
+                        <img src="../images/comment_star_selected.png" v-for=" in level">
+                        <img src="../images/comment_star_normal.png" v-for=" in 5-level">
+                    </div>
+                    <span >({{commentCount}}条评论)</span>
+                </div>
+                <div class="description">
+                    <span>个签：</span>
+                    <span>{{description}}</span>
+                </div>
+                <div class="line"></div>
+                <div class="tagView">
+                    <span>标签</span>
+                    <div class="tag">
+                        <div v-for="item in tags">{{item}}</div>
+                    </div>
+                </div>
+                <div class="moreService">
+                    <span >增值服务</span>
+                    <div class="serviceView">
+                        <div class="serviceItem">
+                            <img src="../images/service_check.png">
+                            <span>贴心小包</span>
+                        </div>
+                        <div class="serviceItem">
+                            <img src="../images/service_check.png">
+                            <span>购票订餐</span>
+                        </div>
+                        <div class="serviceItem">
+                            <img src="../images/service_check.png">
+                            <span>跑腿叫车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="makeOrderView">
+                    <div class="makeOrder">
+                        <img src="../images/markorder_icon.png">
+                        <span>立即下单</span>
+                    </div>
+                    <div class="consult">立即咨询</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="navTool">
+            <div class="nav">产品详情</div>
+            <div class="nav">预定须知</div>
+            <div class="nav">费用说明</div>
+            <div class="nav">退订规则</div>
+            <div class="nav">用户评价</div>
+        </div>
+        <img src="../images/service_desc.png" class="service_desc">
+        <div class="title">
+            <img src="../images/product_desc.png">
+            <span>产品简介</span>
+        </div>
+        <div class="product">
+           <div class="pockage">
+               <img src="../images/pockageA.png">
+               <img src="../images/pockageB.png">
+           </div>
+        </div>
+        <img src="../images/otherDesc.png" class="otherDesc">
+        <img v-bind:src="productImg" class="guideProduct">
+        <div class="title">
+            <img src="../images/markorder_noti.png">
+            <span>预定须知</span>
+        </div>
+        <div class="orderNoti">
+            <img src="../images/makeorder_img.png">
+            <ul>
+                <li>为保障您的利益，请不要通过友途以外的第三方工具，或线下与向导交易，平台仅以真实订单作为产生纠纷的调查依据。</li>
+                <li>平台仅提供信息展示，您所购买的服务由向导提供，如需发票，请与向导协调索取。</li>
+                <li>下单时请预留您的有效邮箱，以便我们在7个工作日内将相片给到您。</li>
+            </ul>
+        </div>
+        <div class="title">
+            <img src="../images/fee_desc.png">
+            <span>费用说明</span>
+        </div>
+        <div class="feedesc_bg">
+            <img src="../images/feedesc_img.png">
+            <ul>
+                <li>费用包含</li>
+                <span>仅包含友途服务商的向导、讲解、拍摄服务。服务时间在8点至20点之间。</span>
+                <li>费用不包含</li>
+                <div class="feeOut">
+                    <span>1.门票费</span>
+                    <span>如果在陪同期间，游客需要向导陪同进入景区讲解，需为向导支付门票；如果不需要陪同，可以请向导在景区外等候。</span>
+                    <span>2.用餐费</span>
+                    <span>建议游客与向导共同用餐，如游客不方便与向导共同用餐，可按当地一份快餐套餐价格标准支付给向导。</span>
+                    <span>3.交通费</span>
+                    <span>游客需支付向导因陪同所产生的交通费，向导到达约定服务地点前产生的交通费除外。</span>
+                    <span>4.保险费</span>
+                    <span>为保障游客的权益，建议在购买向导服务后加购旅行意外保险。</span>
+                </div>
+            </ul>
+        </div>
+        <div class="title">
+            <img src="../images/cancelRules_icon.png">
+            <span>退订规则</span>
+        </div>
+        <div class="cancelRules">
+            <img src="../images/cancelRules_img.png">
+            <ul>
+                <li>为保障游客的权益，建议在购买向导服务后加购旅行意外保险。</li>
+                <li>服务开始前24小时内取消订单，收取一定比例的违约金，24小时之外不收取违约金。</li>
+                <div class="feeOut">
+                    <span>1.违约金收取规则</span>
+                    <span>服务开始前12-24小时取消订单，收取游客已付费用20%违约金。</span>
+                    <span>服务开始前8-12小时内取消订单的，收取游客已付费用50%违约金。</span>
+                    <span>服务开始前8小时内取消订单的，收取游客已付费用100%违约金。</span>
+                    <span>2.订单更改规则</span>
+                    <span>若您在下单后2小时内需要更改订单，可联系客服进行更改,不产生任何费用。</span>
+                </div>
+            </ul>
+        </div>
+        <div class="title">
+            <img src="../images/comment_icon.png">
+            <span>用户评论（{{commentCount}}）</span>
+        </div>
+        <div class="commentInfo" v-for="item in commentList">
+            <div class="commentAvatar_BG">
+                <div class="commentAvatar">
+                    <img  v-bind:src="item.commentorAvatar">
+                    <span>{{item.commentorName}}</span>
+                </div>
+                <div class="commentor_level">
+                    <div class="starView">
+                        <img src="../images/comment_star_selected.png" v-for=" in item.commentLevel">
+                        <img src="../images/comment_star_normal.png" v-for=" in 5-item.commentLevel">
+                    </div>
+                    <span>{{item.commentTime}}</span>
+                </div>
+            </div>
+            <div class="commentContent">
+                <span>{{item.commentorContent}}</span>
+                <div class="commentImg">
+                    <img v-bind:src="imgSrc" v-for="imgSrc in item.commentImg">
+                    <!--<img src="../images/comment_img_placeHolder.png">-->
+                    <!--<img src="../images/comment_img_placeHolder.png">-->
+                    <!--<img src="../images/comment_img_placeHolder.png">-->
+                    <!--<img src="../images/comment_img_placeHolder.png">-->
+                    <!--<img src="../images/comment_img_placeHolder.png">-->
+                    <!--<img src="../images/comment_img_placeHolder.png">-->
+                    <!--<img src="../images/comment_img_placeHolder.png">-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
+<script>
+    var name = '球球'
+    var tags = ['爬山','摄影','踏实诚挚不忘初心的小傻瓜']
+    var commentList = [{
+
+    }]
+    var content = new Vue({
+        el:'#content',
+        data:{
+            name: name,
+            img:'../images/female.png',
+            level:3,
+            commentCount:"20",
+            description:"我很漂亮啦",
+            tags:tags,
+            productImg:'../images/product.png',
+            commentList:[
+                {
+                    commentorName:'对面美女',
+                    commentorAvatar:'../images/comment_avatar.png',
+                    commentLevel:3,
+                    commentTime:'2017-08-12',
+                    commentorContent:'为保障您的利益，请不要通过友途以外的第三方工具，或线下与向导交易，平台仅以真实订单作为产生纠纷的调查依据。平台仅提供信息展示，您所购买的服务由向导提供，如需发票，请与向导协调索取。下单时请预留您的有效邮箱，以便我们在7个工作日内将相片给到您',
+                    commentImg:['../images/comment_img_placeHolder.png','../images/comment_img_placeHolder.png','../images/comment_img_placeHolder.png']
+                }
+//                {},
+//                {},
+//                {},
+//                {},
+//                {},
+            ],
+            commentImg:['../images/comment_img_placeHolder.png','../images/comment_img_placeHolder.png','../images/comment_img_placeHolder.png']
+//            commentorName:'对面美女',
+
+        }
+    })
+</script>
 </html>
