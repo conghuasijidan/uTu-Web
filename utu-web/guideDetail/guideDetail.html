@@ -16,7 +16,6 @@
                 <div class="nameView" >
                     <span >{{name}}</span>
                     <img v-bind:src="img" >
-
                 </div>
                 <div class="commentLevel">
                     <span>评价：</span>
@@ -64,17 +63,17 @@
 
             </div>
         </div>
-        <div class="navTool">
-            <div class="nav">产品详情</div>
-            <div class="nav">预定须知</div>
-            <div class="nav">费用说明</div>
-            <div class="nav">退订规则</div>
-            <div class="nav">用户评价</div>
+        <div class="navTool" id="navTool" style="background-color:#ffffff">
+            <div class="nav" id="nav1"><a href="#product">产品简介</a></div>
+            <div class="nav" id="nav2"><a href="#noti">预定须知</a></div>
+            <div class="nav" id="nav3"><a href="#fee">费用说明</a></div>
+            <div class="nav" id="nav4"><a href="#rules">退订规则</a></div>
+            <div class="nav" id="nav5"><a href="#comment">用户评价</a></div>
         </div>
         <img src="../images/service_desc.png" class="service_desc">
-        <div class="title">
+        <div class="title" id="product">
             <img src="../images/product_desc.png">
-            <span>产品简介</span>
+            <span >产品简介</span>
         </div>
         <div class="product">
            <div class="pockage">
@@ -84,7 +83,7 @@
         </div>
         <img src="../images/otherDesc.png" class="otherDesc">
         <img v-bind:src="productImg" class="guideProduct">
-        <div class="title">
+        <div class="title" id="noti">
             <img src="../images/markorder_noti.png">
             <span>预定须知</span>
         </div>
@@ -96,7 +95,7 @@
                 <li>下单时请预留您的有效邮箱，以便我们在7个工作日内将相片给到您。</li>
             </ul>
         </div>
-        <div class="title">
+        <div class="title" id="fee">
             <img src="../images/fee_desc.png">
             <span>费用说明</span>
         </div>
@@ -118,7 +117,7 @@
                 </div>
             </ul>
         </div>
-        <div class="title">
+        <div class="title" id="rules">
             <img src="../images/cancelRules_icon.png">
             <span>退订规则</span>
         </div>
@@ -137,7 +136,7 @@
                 </div>
             </ul>
         </div>
-        <div class="title">
+        <div class="title" id="comment">
             <img src="../images/comment_icon.png">
             <span>用户评论（{{commentCount}}）</span>
         </div>
@@ -159,13 +158,6 @@
                 <span>{{item.commentorContent}}</span>
                 <div class="commentImg">
                     <img v-bind:src="imgSrc" v-for="imgSrc in item.commentImg">
-                    <!--<img src="../images/comment_img_placeHolder.png">-->
-                    <!--<img src="../images/comment_img_placeHolder.png">-->
-                    <!--<img src="../images/comment_img_placeHolder.png">-->
-                    <!--<img src="../images/comment_img_placeHolder.png">-->
-                    <!--<img src="../images/comment_img_placeHolder.png">-->
-                    <!--<img src="../images/comment_img_placeHolder.png">-->
-                    <!--<img src="../images/comment_img_placeHolder.png">-->
                 </div>
             </div>
         </div>
@@ -173,11 +165,9 @@
 </div>
 </body>
 <script>
+
     var name = '球球'
     var tags = ['爬山','摄影','踏实诚挚不忘初心的小傻瓜']
-    var commentList = [{
-
-    }]
     var content = new Vue({
         el:'#content',
         data:{
@@ -197,16 +187,60 @@
                     commentorContent:'为保障您的利益，请不要通过友途以外的第三方工具，或线下与向导交易，平台仅以真实订单作为产生纠纷的调查依据。平台仅提供信息展示，您所购买的服务由向导提供，如需发票，请与向导协调索取。下单时请预留您的有效邮箱，以便我们在7个工作日内将相片给到您',
                     commentImg:['../images/comment_img_placeHolder.png','../images/comment_img_placeHolder.png','../images/comment_img_placeHolder.png']
                 }
-//                {},
-//                {},
-//                {},
-//                {},
-//                {},
-            ],
-            commentImg:['../images/comment_img_placeHolder.png','../images/comment_img_placeHolder.png','../images/comment_img_placeHolder.png']
-//            commentorName:'对面美女',
 
+            ],
         }
     })
+    var selectedID = "#nav1"
+    $('.nav').on('click',function () {
+        $(selectedID).css('border','0px')
+        var id ='#'+$(this).attr("id")
+        $(this).css('border-bottom','3px solid #498fca')
+        selectedID = id;
+
+    })
+
+    $(window).scroll(function(event){
+
+        var scrollHeight = $(window).scrollTop()//窗口已经滚动的距离
+        var navHeight = $("#navTool").height()
+        var product = $("#product").offset().top -navHeight//元素相对于窗口的距离
+        var noti = $("#noti").offset().top-navHeight
+        var fee = $("#fee").offset().top-navHeight
+        var rules = $("#rules").offset().top-navHeight
+        var comment = $("#comment").offset().top-navHeight
+
+
+        if(scrollHeight <= 720){
+            $('#navTool').attr('class','navTool')
+        }else if (scrollHeight <= noti)
+        {
+
+            scrollChange("#nav1")
+        }else if(scrollHeight <= fee)
+        {
+            scrollChange("#nav2")
+        }else if (scrollHeight <= rules)
+
+        {
+
+            scrollChange("#nav3")
+        }else if (scrollHeight <= comment)
+        {
+            scrollChange("#nav4")
+        }else {
+            scrollChange("#nav5")
+        }
+
+
+    });
+    function scrollChange(paramenter) {
+        console.log(selectedID)
+        $(selectedID).css('border','0px')
+        $(paramenter).css('border-bottom','3px solid #498fca')
+        selectedID = paramenter;
+        $('#navTool').attr('class','navToolFixed')
+    }
+
 </script>
 </html>

@@ -2,6 +2,7 @@ body{
   margin: 0px;
   padding: 0px;
   background-color: #f7f7f7;
+
 }
 .container{
   display: flex;
@@ -180,21 +181,43 @@ body{
 }
 .navTool{
   width: 100%;
-  height: 40px;
+  height: 60px;
   border-bottom: 1px solid #cccccc;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  background-color: #ffffff;
+
+}
+.navToolFixed{
+  background-color: #ffffff;
+  width: 1060px;
+  height: 60px;
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+
 }
 .nav{
-  height: 37px;
+  height: 57px;
   width: 100px;
+
+
+}
+.nav:first-of-type{
+  border-bottom: 3px solid #498fca;
+}
+.nav a{
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  color: #333333;
-  border-bottom: 3px solid #498fca;
-  //margin-left: ;
   //background-color: orange;
 }
 .service_desc{

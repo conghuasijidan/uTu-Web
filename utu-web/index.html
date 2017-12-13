@@ -316,11 +316,11 @@
                 return;
             }
             var parent = $(selectedId).parent()
-            parent.css({"background-color":"#fff","border-bottom":"0px","pointer-events":"auto"})
+            parent.css({"background-color":"#f7f7f7","border-bottom":"0px","pointer-events":"auto"})
             $(selectedId).css("color","#333")
 
             $(this).css({"pointer-events":"none","background-color":"#498fca"})
-            $(id).css("color","#fff")
+            $(id).css("color","#f7f7f7")
             selectedId = id
 
         });
@@ -328,12 +328,12 @@
     function scrollChange(paramenter) {
         var parent = $(selectedId).parent()
 //        bindChange(parent)
-        parent.css({"background-color":"#fff","border-bottom":"0px","pointer-events":"auto"})
+        parent.css({"background-color":"#f7f7f7","border-bottom":"0px","pointer-events":"auto"})
         $(selectedId).css("color","#333")
 
         var id = paramenter
         $(id).parent().css({"pointer-events":"none","background-color":"#498fca"})
-        $(id).css("color","#fff")
+        $(id).css("color","#f7f7f7")
         selectedId = id
         
     }

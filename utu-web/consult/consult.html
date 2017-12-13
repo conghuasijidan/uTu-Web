@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>线上咨询</title>
+    <link href="../css/consult.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="../js/My97DatePicker/WdatePicker.js"></script>
+
+</head>
+<body>
+  <div class="container">
+     <div class="content">
+       <div class="tool">
+           <span>线上管家</span>
+           <img src="../images/close.png">
+       </div>
+       <div class="contentInfo">
+           <div class="left">
+               <img src="../images/consult_img.png">
+               <span>我是您专属的旅行顾问，请将您的旅行想法告诉我，我将为您定制合理舒适的私人旅行。</span>
+           </div>
+           <div class="right">
+               <div class="title">目的地<span>*</span></div>
+               <input type="text" class="toloc" placeholder="目的地，例如杭州、西藏" >
+               <div class="title">预定时间<span>*</span></div>
+               <div class="time">
+                   <div class="leavedTime">
+                       <!--<span id="leaveTime">出行日期</span>-->
+                       <input type="text" id="leaveTime" placeholder="出发日期" readonly>
+                       <img src="../images/calender_icon.png"  onclick="WdatePicker({el:'leaveTime'})">
+                   </div>
+
+                   <div class="backTime">
+                       <input type="text" id="backTime" placeholder="返回日期" readonly>
+                       <img src="../images/calender_icon.png"  onclick="WdatePicker({el:'backTime'})">
+                   </div>
+               </div>
+               <div class="mix">
+                   <div class="total">
+                       <div class="title">出行人数<span>*</span></div>
+                       <div class="totalInput">
+                           <img src="../images/minus.png" id="minus">
+                           <span id="totalCount">出行人数</span>
+                           <img src="../images/add.png" id="add">
+                       </div>
+                   </div>
+                   <div class="fromloc">
+                       <div class="title">出发地<span>*</span></div>
+                       <input type="text" placeholder="出发地，例如苏州、西藏">
+                   </div>
+               </div>
+               <div class="title"><img src="../images/hotel_icon.png">酒店选择<span>*</span></div>
+               <div class="choose">
+                   <div class="checkView">
+                       <span>豪华五星级</span>
+                       <img :src="hotel[0]" @click="change(0,0,'豪华五星级')">
+                   </div>
+                   <div class="checkView">
+                       <span>高端四星级</span>
+                       <img :src="hotel[1]" @click="change(0,1,'高端四星级')">
+                   </div>
+                   <div class="checkView">
+                       <span>舒适三星级</span>
+                       <img :src="hotel[2]" @click="change(0,2,'舒适三星级')">
+                   </div>
+                   <div class="checkView">
+                       <span>其他</span>
+                       <img :src="hotel[3]" @click="change(0,3,'其他')">
+                   </div>
+               </div>
+               <div class="title"><img src="../images/food_icon.png">美食选择<span>*</span></div>
+               <div class="choose">
+                   <div class="checkView">
+                       <span>清淡</span>
+                       <img :src="food[0]" @click="change(1,0,'清淡')">
+                   </div>
+                   <div class="checkView">
+                       <span>麻辣</span>
+                       <img :src="food[1]" @click="change(1,1,'麻辣')">
+                   </div>
+                   <div class="checkView">
+                       <span>海鲜</span>
+                       <img :src="food[2]" @click="change(1,2,'海鲜')">
+                   </div>
+                   <div class="checkView">
+                       <span>其他</span>
+                       <img :src="food[3]" @click="change(1,3,'其他')">
+                   </div>
+               </div>
+               <div class="title"><img src="../images/traffic_icon.png">交通选择<span>*</span></div>
+               <div class="choose">
+                   <div class="checkView">
+                       <span>飞机</span>
+                       <img :src="traffic[0]" @click="change(2,0,'飞机')">
+                   </div>
+                   <div class="checkView">
+                       <span>高铁</span>
+                       <img :src="traffic[1]" @click="change(2,1,'高铁')">
+                   </div>
+                   <div class="checkView">
+                       <span>大巴</span>
+                       <img :src="traffic[2]" @click="change(2,2,'大巴')">
+                   </div>
+                   <div class="checkView">
+                       <span>其他</span>
+                       <img :src="traffic[3]" @click="change(2,3,'其他')">
+                   </div>
+               </div>
+               <div class="title"><img src="../images/budge_icon.png">预算选择<span>*</span></div>
+               <div class="choose">
+                   <div class="checkView">
+                       <span>五千以内</span>
+                       <img :src="budge[0]" @click="change(3,0,'五千以内')">
+                   </div>
+                   <div class="checkView">
+                       <span>五千~1万</span>
+                       <img :src="budge[1]" @click="change(3,1,'五千~1万')">
+                   </div>
+                   <div class="checkView">
+                       <span>1万以上</span>
+                       <img :src="budge[2]" @click="change(3,2,'1万以上')">
+                   </div>
+                   <div class="checkView">
+                       <span>按需花钱</span>
+                       <img :src="budge[3]" @click="change(3,3,'按需花钱')">
+                   </div>
+               </div>
+               <div class="title"><img src="../images/insurance_icon.png">商业保险<span>*</span></div>
+               <div class="choose">
+                   <div class="checkView">
+                       <span>需要</span>
+                       <img :src="insurance[0]" @click="change(4,0,'需要')">
+                   </div>
+                   <div class="checkView">
+                       <span>不需要</span>
+                       <img :src="insurance[1]" @click="change(4,1,'不需要')">
+                   </div>
+               </div>
+               <div class="title"><img src="../images/food_icon.png">旅行偏好（可多选）<span>*</span></div>
+               <div class="choose">
+                   <div class="checkView">
+                       <span>蜜月</span>
+                       <img :src="travelTag[0]" @click="change(5,0,'蜜月')">
+                   </div>
+                   <div class="checkView">
+                       <span>亲子</span>
+                       <img :src="travelTag[1]" @click="change(5,1,'亲子')">
+                   </div>
+                   <div class="checkView">
+                       <span>度假</span>
+                       <img :src="travelTag[2]" @click="change(5,2,'度假')">
+                   </div>
+                   <div class="checkView">
+                       <span>美食</span>
+                       <img :src="travelTag[3]" @click="change(5,3,'美食')">
+                   </div>
+                   <div class="checkView">
+                       <span>建筑</span>
+                       <img :src="travelTag[4]" @click="change(5,4,'建筑')">
+                   </div>
+                   <div class="checkView">
+                       <span>购物</span>
+                       <img :src="travelTag[5]" @click="change(5,5,'购物')">
+                   </div>
+                   <div class="checkView">
+                       <span>人文</span>
+                       <img :src="travelTag[6]" @click="change(5,6,'人文')">
+                   </div>
+                   <div class="checkView">
+                       <span>摄影</span>
+                       <img :src="travelTag[7]" @click="change(5,7,'摄影')">
+                   </div>
+                   <div class="checkView">
+                       <span>陪父母</span>
+                       <img :src="travelTag[8]" @click="change(5,8,'陪父母')">
+                   </div>
+                   <div class="checkView">
+                       <span>陪朋友</span>
+                       <img :src="travelTag[9]" @click="change(5,9,'陪朋友')">
+                   </div>
+                   <div class="checkView">
+                       <span>商务</span>
+                       <img :src="travelTag[10]" @click="change(5,10,'商务')">
+                   </div>
+                   <div class="checkView">
+                       <span>其他</span>
+                       <img :src="travelTag[11]" @click="change(5,11,'其他')">
+                   </div>
+               </div>
+               <div class="submit">提交咨询</div>
+           </div>
+       </div>
+     </div>
+  </div>
+</body>
+<script>
+    var totalCount = 0;
+    var uncheckSrc = '../images/consult_uncheck.png';
+    var checkedSrc = '../images/consult_checked.png';
+    var hotelArr = [uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc];
+    var foodArr = [uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc];
+    var trafficArr = [uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc];
+    var budgeArr = [uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc];
+    var insuranceArr = [uncheckSrc,uncheckSrc];
+    var travelTagArr = [uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc,uncheckSrc];
+    var onlyOneArr = ['','','','','']
+    var moreArr = []
+
+
+// 初始化日历控件
+    function createTime(){
+        WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'2017-12-01',maxDate:'2022-01-01'});
+    }
+// 人数加减
+    $('#add').on('click',function () {
+        totalCount++
+        alert(totalCount)
+        $('#totalCount').value = totalCount
+    })
+    $('#minus').on('click',function () {
+        totalCount--
+        $('#totalCount').value = totalCount
+    })
+
+    var vm= new Vue({
+                        el:'.right',
+                        data:{
+                            hotel:hotelArr,
+                            food:foodArr,
+                            traffic:trafficArr,
+                            budge:budgeArr,
+                            insurance:insuranceArr,
+                            travelTag:travelTagArr
+                        },
+                        methods:{
+                            change:function (type,index,str) {
+                                var tempArr =[]
+                                var temp = ''
+                                switch (type){
+                                    case 0:{
+                                        tempArr = hotelArr
+                                        temp = this.hotel
+                                        onlyOneArr[0] = str
+                                        break
+                                    }
+                                    case 1:{
+                                        tempArr = foodArr
+                                        temp = this.food
+                                        onlyOneArr[1] = str
+                                        break
+                                    }
+                                    case 2:{
+                                        tempArr = trafficArr
+                                        temp = this.traffic
+                                        onlyOneArr[2] = str
+                                        break
+                                    }
+                                    case 3:{
+                                        tempArr = budgeArr
+                                        temp = this.budge
+                                        onlyOneArr[3] = str
+                                        break
+                                    }
+                                    case 4:{
+                                        tempArr = insuranceArr
+                                        temp = this.insurance
+                                        onlyOneArr[4] = str
+                                        break
+                                    }
+                                    case 5:{
+
+                                        if(this.travelTag[index] == uncheckSrc)
+                                        {
+                                            this.$set(this.travelTag,index,checkedSrc)
+                                            if(moreArr.indexOf(str) == -1)
+                                            {
+                                                moreArr.push(str)
+                                            }
+
+                                        }else{
+                                            this.$set(this.travelTag,index,uncheckSrc)
+                                            var idx = moreArr.indexOf(str)
+                                            if(idx != -1)
+                                            {
+                                                moreArr.splice(idx)
+                                            }
+
+                                        }
+
+
+
+                                        break
+                                    }
+
+                                }
+                                for (var i=0;i<tempArr.length;i++)
+                                    {
+                                        if(i==index)
+                                        {
+                                            this.$set(temp,i,checkedSrc)
+
+
+                                        }else
+                                        {
+                                            this.$set(temp,i,uncheckSrc)
+                                        }
+
+                                    }
+
+                            }
+
+                        }
+
+        });
+
+    $('.submit').on('click',function () {
+
+        for( var i =0;i<moreArr.length ;i++)
+        {
+            console.log(moreArr[i])
+        }
+
+    })
+
+
+
+</script>
+</html>
