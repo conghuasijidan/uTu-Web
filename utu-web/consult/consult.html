@@ -213,16 +213,7 @@
     function createTime(){
         WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'2017-12-01',maxDate:'2022-01-01'});
     }
-// 人数加减
-    $('#add').on('click',function () {
-        totalCount++
-        alert(totalCount)
-        $('#totalCount').value = totalCount
-    })
-    $('#minus').on('click',function () {
-        totalCount--
-        $('#totalCount').value = totalCount
-    })
+
 
     var vm= new Vue({
                         el:'.right',
@@ -324,7 +315,19 @@
 
     })
 
-
+    // 人数加减
+    $('#add').on('click',function () {
+        totalCount++
+        $('#totalCount').text(totalCount)
+    })
+    $('#minus').on('click',function () {
+        totalCount--
+        if (totalCount<0)
+        {
+            totalCount = 0
+        }
+        $('#totalCount').text(totalCount)
+    })
 
 </script>
 </html>
