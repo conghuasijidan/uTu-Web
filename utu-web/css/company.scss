@@ -1,0 +1,276 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #f7f7f7;
+}
+.tool{
+  background-color: #4d4d4d;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  min-width: 1200px;
+  //margin-top: 60px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: 20%;
+}
+.tool li:first-of-type{
+
+
+  color: #498fca;
+
+
+}
+.tool li{
+  font-size: 14px;
+  color: #ffffff;
+  margin-right: 40px;
+  float: left;
+  cursor: pointer;
+  height: 50px;
+  //background-color: white;
+  display: flex;
+  align-items: center;
+}
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1200px;
+}
+.aboutUs {
+  width: 1100px;
+  background-color: #ffffff;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 95px;
+}
+.title{
+  font-size: 28px;
+  color: #498fca;
+  margin-top: 55px;
+  margin-bottom: 55px;
+}
+.info{
+  font-size: 22px;
+  color: #333;
+  line-height: 38px;
+  margin-bottom: 50px;
+}
+.slogan{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.slogan b{
+  font-size: 22px;
+  color: #333333;
+}
+.obj{
+  width: 100%;
+  height: 260px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mediumReport {
+  width: 1110px;
+  background-color: #ffffff;
+  padding-left: 45px;
+  padding-right: 45px;
+  //display: flex;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 95px;
+
+}
+.reportCell{
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+  width: 100%;
+  height:400px;
+  //margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+.reportCell img{
+  width: 550px;
+  height: 360px;
+  margin-left: 20px;
+}
+.reportInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 107px;
+  margin-right: 20px;
+  //background-color: orange;
+  height: 100%;
+}
+.reportInfo span{
+  font-size: 16px;
+  color: #333333;
+  line-height: 25px;
+}
+.reportInfo span:first-of-type{
+  margin-top: 40px;
+}
+.reportTime{
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+}
+.reportTime div{
+  font-size: 14px;
+  color: #999999;
+  margin-right: 18px;
+}
+.reportDetailBG{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.reportDetail{
+  width: 150px;
+  height: 40px;
+  margin-top: 50px;
+
+}
+.reportDetail a{
+  background-color: #498fca;
+  border-radius: 5px;
+  text-decoration:none;
+  font-size: 18px;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team{
+  width: 1140px;
+  display: none;
+  flex-direction: column;
+  margin-bottom: 210px;
+  min-width: 1200px;
+}
+.teamTitle{
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+.teamTitle b{
+  font-size: 20px;
+  color: #333333;
+}
+.teamCell{
+  width: 100%;
+  height: 300px;
+  border: 2px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+}
+.teamCell img{
+  width: 480px;
+  height: 260px;
+  margin-left: 18px;
+}
+.teamInfo{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 60px;
+  margin-right: 38px;
+}
+.member{
+  font-size: 30px;
+  color: #333333;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.memberJob{
+  font-size: 20px;
+  color: #999;
+  margin-bottom: 26px;
+}
+.memberDesc{
+  font-size: 20px;
+  color: #333333;
+}
+.contactUs{
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 1140px;
+  min-width: 1200px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.contactWay{
+  display: flex;
+  width: 100%;
+
+}
+.contactInfo{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.contactTitle{
+  font-size: 30px;
+  color: #498fca;
+  margin-top: 40px;
+  margin-bottom: 36px;
+}
+.contactDesc{
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+.code{
+  //height: 100%;
+  display: flex;
+  //background-color: orange;
+
+}
+.codeView{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 70px;
+  margin-top: 140px;
+}
+.codeView span{
+  font-size: 28px;
+  color: #498fca;
+  margin-bottom: 20px;
+}
+.codeView img{
+  width: 260px;
+  height: 260px;
+}
+.map{
+  width: 1140px;
+  height: 600px;
+  background-color: orange;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+.iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}

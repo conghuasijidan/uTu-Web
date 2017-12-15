@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公司信息</title>
+    <link href="../css/company.css" rel="stylesheet">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+<body>
+    <div class="tool">
+        <ul>
+            <li id="li1" >关于我们</li>
+            <li id="li2">媒体报道</li>
+            <li id="li3">团队介绍</li>
+            <li id="li4">联系我们</li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="aboutUs">
+            <span class="title">—&nbsp关于友途&nbsp—</span>
+            <span class="info">杭州友途网络科技有限公司成立于2017年6月，是一家集互联网产品研发、发行为一体的创新型科技公司，以“友途网”作为主打产品，为用户提供“导游2.0”服务。</span>
+            <span class="info"> 自公司成立以来，app手机应用与微信小程序同时推进，定位用户自由行途中最好的旅行管家，无论是以“旅行纪念”为亮点，为您提供导游2.0服务的“旅行纪念师”、还是为您定制私人旅游线路，帮您省时省力的提供全网性价比最高的“旅行管家”、或是在平台上发表游记，互相探讨旅游趣事的专业“旅行体验师”，亦或是多语种的“旅行翻译助手”，都能为您的旅行保驾护航。</span>
+            <div class="slogan">
+                <span class="info">友途的理念——做自由行的管家</span>
+                <span><b>关注我们</b></span>
+                <span class="info" style="margin-bottom: 0px">官方网站:wwww.yotoowang.com</span>
+                <span class="info" >微信订阅号:友途网</span>
+            </div>
+            <span class="title">—&nbsp友途关键词&nbsp—</span>
+            <img src="../images/company_keyword.png">
+        </div>
+        <div class="mediumReport">
+            <div class="reportCell">
+               <img src="../images/zjrb.png">
+                <div class="reportInfo">
+                    <span>旅游业嫁接"共享经济"模式</span>
+                    <span>杭州悄现网约导游</span>
+                    <div class="reportTime"><div>(2017-09-04)</div></div>
+                    <span>日前，23岁的宁波人王先生带女朋友来杭州游玩，与以前出游不同的是，这次他在网上提前预约了一位“私人导游”，“不用做攻略，不用担心“被购物”，只要说你想玩什么，全程由导游为你量身定制最佳路线“......</span>
+                    <div class="reportDetailBG"><div class="reportDetail"><a target="_blank" href="http://www.360doc.com/content/17/0904/14/8507568_684537057.shtml">查看详情</a></div></div>
+                </div>
+            </div>
+            <div class="reportCell">
+                <img src="../images/qjwb.png">
+                <div class="reportInfo">
+                    <span>十一长假外出旅游</span>
+                    <span>找个"网约导游"吧</span>
+                    <div class="reportTime"><div>(2017-09-11)</div></div>
+                    <span>眼看十一长假将至，西湖边的房间好订吗？昨天，记者向景区多家名宿打听了一下，发现假期前几天的房间已经订不到了，后半段还有部分空房......</span>
+                    <div class="reportDetailBG"><div class="reportDetail"><a target="_blank" href="http://www.360doc.com/content/17/0911/20/8507568_686328597.shtml">查看详情</a></div></div>
+                </div>
+            </div>
+            <div class="reportCell">
+                <img src="../images/sxttw.png">
+                <div class="reportInfo">
+                    <span>旅游业嫁接"共享经济"模式</span>
+                    <span>杭州悄现网约导游</span>
+                    <div class="reportTime"><div>(2017-09-04)</div></div>
+                    <span>日前，23岁的宁波人王先生带女朋友来杭州游玩，与以前出游不同的是，这次他在网上提前预约了一位“私人导游”，“不用做攻略，不用担心“被购物”，只要说你想玩什么，全程由导游为你量身定制最佳路线“......</span>
+                    <div class="reportDetailBG"><div class="reportDetail"><a target="_blank" href="http://jc.sx198.cn/ArticleView_108425.html">查看详情</a></div></div>
+                </div>
+            </div>
+            <div class="reportCell">
+                <img src="../images/txzdw.png">
+                <div class="reportInfo">
+                    <span>旅游业嫁接"共享经济"模式</span>
+                    <span>杭州悄现网约导游</span>
+                    <div class="reportTime"><div>(2017-09-04)</div></div>
+                    <span>日前，23岁的宁波人王先生带女朋友来杭州游玩，与以前出游不同的是，这次他在网上提前预约了一位“私人导游”，“不用做攻略，不用担心“被购物”，只要说你想玩什么，全程由导游为你量身定制最佳路线“......</span>
+                    <div class="reportDetailBG"><div class="reportDetail"><a target="_blank" href="http://zj.qq.com/a/20170904/049689.htm">查看详情</a></div></div>
+                </div>
+            </div>
+            <div class="reportCell">
+                <img src="../images/zjxww.png">
+                <div class="reportInfo">
+                    <span>旅游业嫁接"共享经济"模式</span>
+                    <span>杭州悄现网约导游</span>
+                    <div class="reportTime"><div>(2017-09-04)</div></div>
+                    <span>日前，23岁的宁波人王先生带女朋友来杭州游玩，与以前出游不同的是，这次他在网上提前预约了一位“私人导游”，“不用做攻略，不用担心“被购物”，只要说你想玩什么，全程由导游为你量身定制最佳路线“......</span>
+                    <div class="reportDetailBG"><div class="reportDetail"><a target="_blank" href="http://zjnews.zjol.com.cn/zjnews/hznews/201709/t20170904_4967848.shtml">查看详情</a></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="team">
+            <span class="teamTitle"><b>友途团队</b></span>
+            <div class="teamCell" v-for="item in members">
+                <img v-bind:src="item.avatar">
+                <div class="teamInfo">
+                    <span class="member">{{item.name}}</span>
+                    <span class="memberJob">{{item.job}}</span>
+                    <span class="memberDesc">{{item.desc}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="contactUs">
+            <div class="contactWay">
+               <div class="contactInfo">
+                   <span class="contactTitle">服务商合作</span>
+                   <span class="contactDesc">联系人:丁先生</span>
+                   <span class="contactDesc">联系方式：0571-89715260</span>
+                   <span class="contactTitle">联系地址</span>
+                   <span class="contactDesc">地址:浙江省杭州市江干区创意设计中心B幢3F-B</span>
+                   <span class="contactDesc">邮箱：dingxiao@ubangwang.com</span>
+               </div>
+               <div class="code">
+                   <div class="codeView">
+                       <span>友途微信小程序</span>
+                       <img src="../images/footer_code.png">
+                   </div>
+                   <div class="codeView">
+                       <span>友途微信公众号</span>
+                       <img src="../images/gzhcode.png">
+                   </div>
+               </div>
+            </div>
+            <div class="map" id="myMap"></div>
+        </div>
+    </div>
+
+    <object class="obj" type="text/html" data="../footer/footer.html" ></object>
+</body>
+<script>
+    var vm = new Vue({
+        el:'.team',
+        data:{
+            members:[
+                {
+                avatar:'../images/sxttw.png',
+                name:'丁潇',
+                job:'友途网CEO',
+                desc:'曾供职于浙江省中国旅行社宁波分公司，曾任一家公司CEO，拥有丰富的旅游工作经验，以及犀利的互联网思维能力。'
+                },{
+                    avatar:'../images/sxttw.png',
+                    name:'郑德杰',
+                    job:'友途网总经理',
+                    desc:'澳大利亚悉尼大学信息技术硕士，新西兰威特利亚国立理工学院信息技术学士，拥有丰富的项目运营经验以及出色的前端开发技术能力。'
+                },{
+                    avatar:'../images/sxttw.png',
+                    name:'李翔',
+                    job:'友途网技术总监',
+                    desc:'澳大利亚莫纳什大学信息技术硕士，澳大利亚国立大学软件工程学士，曾供职于中国人寿数据中心，拥有高学历背景以及丰富的IT行业和技术开发经验。'
+                },{
+                    avatar:'../images/sxttw.png',
+                    name:'胡悦颖',
+                    job:'友途网运维总监',
+                    desc:'曾供职于浙江中青旅等多家旅行社，拥有丰富境内外旅游带团经验，并曾在一公司任市场经理一职，具有出色的市场公关及项目运维能力。'
+                },{
+                    avatar:'../images/sxttw.png',
+                    name:'徐大为',
+                    job:'友途网运营总监',
+                    desc:'浙江大学EMBA，曾任一家公司CEO，中国国际进口产品博览会图标设计商务部一等奖获得者。凭借多年运营管理经验以及强大的运营能力，建立了强大的客户关系网络。'
+                },{
+                    avatar:'../images/sxttw.png',
+                    name:'章梦菲',
+                    job:'友途网设计总监',
+                    desc:'曾在台湾龙华科技大学交流学习，具有多年UI界面设计经验，拥有敏锐的设计思路以及独到的设计见解。'
+                }]
+        }
+    })
+    var toolSelected = '#li1';
+    $('.tool li').on('click',function(){
+//        上一次选中的页面消失
+
+        switch (toolSelected){
+            case '#li1':
+            {
+                $('.aboutUs').css('display','none')
+                break;
+            }
+            case '#li2':
+            {
+                $('.mediumReport').css('display','none')
+                break;
+            }
+            case '#li3':
+            {
+                $('.team').css('display','none')
+                break;
+            }
+            case '#li4':
+            {
+                $('.contactUs').css('display','none')
+                break;
+            }
+        }
+
+        $(toolSelected).css('color','#ffffff');
+        $(this).css('color','#498fca');
+        var id = '#'+ $(this).attr('id');
+        toolSelected =id;
+
+//        点击的页面显示
+        changeView(id)
+    })
+    function changeView(toolid) {
+        switch (toolid){
+            case '#li1':
+            {
+                $('.aboutUs').css('display','flex')
+                break;
+            }
+            case '#li2':
+            {
+                $('.mediumReport').css('display','flex')
+                break;
+            }
+            case '#li3':
+            {
+                $('.team').css('display','flex')
+                break;
+            }
+            case '#li4':
+            {
+                $('.contactUs').css('display','flex')
+                break;
+            }
+        }
+
+
+    }
+
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("myMap");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(120.211487,30.285291);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.disableKeyboard();//禁用键盘上下左右键移动地图，默认禁用(可不写)
+    }
+
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+        map.addControl(ctrl_nav);
+        //向地图中添加比例尺控件
+        var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+        map.addControl(ctrl_sca);
+    }
+
+    //标注点数组
+    var markerArr = [{title:"杭州创意设计中心",content:"我的备注",point:"120.211532|30.285618",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+    ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+            var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+            var iw = createInfoWindow(i);
+            var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+            marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                borderColor:"#808080",
+                color:"#333",
+                cursor:"pointer"
+            });
+
+            (function(){
+                var index = i;
+                var _iw = createInfoWindow(i);
+                var _marker = marker;
+                _marker.addEventListener("click",function(){
+                    this.openInfoWindow(_iw);
+                });
+                _iw.addEventListener("open",function(){
+                    _marker.getLabel().hide();
+                })
+                _iw.addEventListener("close",function(){
+                    _marker.getLabel().show();
+                })
+                label.addEventListener("click",function(){
+                    _marker.openInfoWindow(_iw);
+                })
+                if(!!json.isOpen){
+                    label.hide();
+                    _marker.openInfoWindow(_iw);
+                }
+            })()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://map.baidu.com/image/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+
+    initMap();//创建和初始化地图
+
+    $('.contactUs').css('visibility','visible');
+    $('.contactUs').css('display','none')
+
+
+</script>
+</html>

@@ -13,15 +13,24 @@
            <span>0571-89715260</span>
            <span>(上班时间：09：00-22：00)</span>
        </div>
-      <div class="kefu">
+      <div class="company">
           <span >公司信息</span>
-          <span id="aboutus">关于我们</span>
-          <span id="medium">媒体报道</span>
-          <span id="team">团队介绍</span>
+          <div class="diss">
+              <span id="aboutus">关于我们</span>
+              <span id="medium">媒体报道</span>
+          </div>
+          <div class="diss">
+              <span id="team">团队介绍</span>
+              <span id="contact">联系我们</span>
+          </div>
       </div>
       <div class="code">
           <img src="../images/footer_code.png">
-          <span>友途小程序</span>
+          <span>友途微信小程序</span>
+      </div>
+      <div class="code">
+          <img src="../images/gzhcode.png">
+          <span>友途微信公共号</span>
       </div>
   </div>
 </body>
@@ -35,7 +44,9 @@
     $("#team").on('click',function () {
         alert('导航到团队介绍')
     })
-
+    $("#contact").on('click',function () {
+        alert('导航到联系我们')
+    })
 
 </script>
 </html>
