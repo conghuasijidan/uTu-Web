@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导游</title>
+    <link href="../css/guides.css" rel="stylesheet">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+  <div class="container">
+      <img src="../images/gudies_headerImage.png" class="">
+      <div class="content">
+         <div class="blockView">
+             <div class="titleView">
+                 <div class="separateLine"></div>
+                 <span>途友推荐</span>
+                 <div class="separateLine"></div>
+             </div>
+             <span class="subTitle">约个途友去拍照</span>
+             <div class="guides" id="guides">
+                 <div class="guideCell" v-for="item in guideList">
+                     <img v-bind:src="item.image">
+                     <div class="guideInfo">
+                         <img :src="item.avatar" class="avatar">
+                         <div class="desc">
+                             <div class="name">
+                                 <span>{{item.name}}</span>
+                                 <div class="starView">
+                                     <img src="../images/comment_star_selected.png" v-for=" in item.level">
+                                     <img src="../images/comment_star_normal.png" v-for=" in 5-item.level">
+                                 </div>
+                             </div>
+                             <div class="tags" >
+                                <div class="tag" v-for="tag in item.tags">{{tag}}</div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+             </div>
+         </div>
+          <div class="aboutProduct">
+              <img src="../images/guides_product.png">
+          </div>
+      </div>
+
+  </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#guides",
+        data:{
+            guideList:[{
+                name:'昵称',
+                image:'../images/guides_placeHolder.png',
+                avatar:'../images/guidesAvatar_placeHolder.png',
+                tags:['摄影','爬山'],
+                level:3,
+            },{
+                name:'昵称',
+                image:'../images/guides_placeHolder.png',
+                avatar:'../images/guidesAvatar_placeHolder.png',
+                tags:['摄影','爬山'],
+                level:3,
+            },{
+                name:'昵称',
+                image:'../images/guides_placeHolder.png',
+                avatar:'../images/guidesAvatar_placeHolder.png',
+                tags:['摄影','爬山'],
+                level:3,
+            },{
+                name:'昵称',
+                image:'../images/guides_placeHolder.png',
+                avatar:'../images/guidesAvatar_placeHolder.png',
+                tags:['摄影','爬山'],
+                level:3,
+            },{
+                name:'昵称',
+                image:'../images/guides_placeHolder.png',
+                avatar:'../images/guidesAvatar_placeHolder.png',
+                tags:['摄影','爬山'],
+                level:3,
+            },{
+                name:'昵称',
+                image:'../images/guides_placeHolder.png',
+                avatar:'../images/guidesAvatar_placeHolder.png',
+                tags:['摄影','爬山'],
+                level:3,
+            },]
+        }
+    })
+</script>
+</html>

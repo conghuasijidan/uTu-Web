@@ -1,0 +1,123 @@
+@charset "UTF-8";
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f7f7f7; }
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 1200px; }
+
+.content {
+  width: 1200px;
+  display: flex;
+  flex-direction: column; }
+
+.blockView {
+  background-color: #ffffff;
+  width: 1140px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 40px; }
+
+.separateLine {
+  border-bottom: 1px solid #cccccc;
+  width: 200px;
+  margin-bottom: 10px; }
+
+.titleView {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 90px; }
+
+.titleView span {
+  font-size: 36px;
+  color: #333333;
+  margin-left: 40px;
+  margin-right: 40px; }
+
+.subTitle {
+  font-size: 14px;
+  color: #666666; }
+
+.guides {
+  width: 100%;
+  margin-top: 60px; }
+
+.guideCell {
+  float: left;
+  margin-right: 20px; }
+
+.guideInfo {
+  display: flex;
+  height: 100px;
+  align-items: center; }
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin-left: 20px;
+  margin-right: 20px; }
+
+.desc {
+  display: flex;
+  flex-direction: column; }
+
+.name {
+  display: flex;
+  align-items: center; }
+
+.name span {
+  font-size: 18px;
+  color: #333333;
+  white-space: nowrap;
+  /*强制span不换行*/
+  display: inline-block;
+  /*将span当做块级元素对待*/
+  max-width: 130px;
+  overflow: hidden;
+  /*超出宽度部分隐藏*/
+  text-overflow: ellipsis;
+  /*超出部分以点号代替*/ }
+
+.starView {
+  display: flex;
+  margin-left: 10px; }
+
+.starView img {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px; }
+
+.tags {
+  display: flex;
+  width: 250px;
+  margin-top: 10px; }
+
+.tag {
+  background-color: rgba(73, 143, 202, 0.1);
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12.5px;
+  border: 1px solid #498fca;
+  color: #498fca;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px; }
+
+.aboutProduct {
+  width: 1200px;
+  margin-bottom: 40px; }
+
+/*# sourceMappingURL=guides.css.map */
