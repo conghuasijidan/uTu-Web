@@ -123,7 +123,8 @@ ul {
 .row1 {
   width: 100%;
   margin-top: 60px;
-  min-width: 1000px; }
+  min-width: 1000px;
+  margin-bottom: 40px; }
 
 p {
   margin: 0px; }
@@ -132,23 +133,32 @@ p {
   width: 100%;
   height: auto; }
 
-.row2 {
+.row2BG {
   width: 100%;
-  min-width: 1000px;
-  margin-top: -5px;
+  display: flex;
+  justify-content: center;
+  min-width: 1000px; }
+
+.row2 {
+  width: 75%;
+  margin-top: 40px;
   display: flex; }
   @media screen and (min-width: 1600px) {
     .row2 {
-      height: 450px; } }
+      height: 360px;
+      margin-bottom: 20px; } }
   @media (min-width: 1300px) and (max-width: 1600px) {
     .row2 {
-      height: 350px; } }
+      height: 300px;
+      margin-bottom: 18px; } }
   @media (min-width: 1000px) and (max-width: 1300px) {
     .row2 {
-      height: 300px; } }
+      height: 250px;
+      margin-bottom: 18px; } }
   @media screen and (max-width: 1000px) {
     .row2 {
-      height: 233px; } }
+      height: 200px;
+      margin-bottom: 18px; } }
 
 .row2_left, .row2_right {
   width: 33.3%;
@@ -164,35 +174,35 @@ p {
   @media screen and (min-width: 1600px) {
     .row2_left div:first-child, .row2_right div:first-child {
       font-size: 18px;
-      padding-top: 60px; } }
+      padding-top: 40px; } }
   @media (min-width: 1300px) and (max-width: 1600px) {
     .row2_left div:first-child, .row2_right div:first-child {
       font-size: 15px;
-      padding-top: 50px; } }
+      padding-top: 30px; } }
   @media (min-width: 1000px) and (max-width: 1300px) {
     .row2_left div:first-child, .row2_right div:first-child {
       font-size: 12px;
-      padding-top: 40px; } }
+      padding-top: 25px; } }
   @media screen and (max-width: 1000px) {
     .row2_left div:first-child, .row2_right div:first-child {
       font-size: 9px;
-      padding-top: 30px; } }
+      padding-top: 20px; } }
 
 .row2_left div:nth-child(2), .row2_right div:nth-child(2) {
   color: #fff;
   /*background-color: #1b6d85;*/ }
   @media screen and (min-width: 1600px) {
     .row2_left div:nth-child(2), .row2_right div:nth-child(2) {
-      font-size: 36px; } }
+      font-size: 30px; } }
   @media (min-width: 1300px) and (max-width: 1600px) {
     .row2_left div:nth-child(2), .row2_right div:nth-child(2) {
-      font-size: 30px; } }
+      font-size: 25px; } }
   @media (min-width: 1000px) and (max-width: 1300px) {
     .row2_left div:nth-child(2), .row2_right div:nth-child(2) {
-      font-size: 24px; } }
+      font-size: 20px; } }
   @media screen and (max-width: 1000px) {
     .row2_left div:nth-child(2), .row2_right div:nth-child(2) {
-      font-size: 18px; } }
+      font-size: 16px; } }
 
 .row2_left div:nth-child(3), .row2_right div:nth-child(3) {
   background-color: #fff;
@@ -373,26 +383,9 @@ p {
       height: 250px; } }
 
 .row4_bg {
-  background-color: #d1d1d1;
   width: 100%;
   min-width: 1000px;
   padding-top: 1px; }
-  @media screen and (min-width: 1600px) {
-    .row4_bg {
-      height: 540px;
-      margin-top: 75px; } }
-  @media (min-width: 1300px) and (max-width: 1600px) {
-    .row4_bg {
-      height: 430px;
-      margin-top: 65px; } }
-  @media (min-width: 1000px) and (max-width: 1300px) {
-    .row4_bg {
-      height: 340px;
-      margin-top: 55px; } }
-  @media screen and (max-width: 1000px) {
-    .row4_bg {
-      height: 300px;
-      margin-top: 45px; } }
 
 .row4 {
   width: 100%;
@@ -437,27 +430,26 @@ p {
 .business_mask {
   width: 100%;
   height: 100%;
-  background-color: rgba(206, 207, 207, 0.8);
   display: flex;
   justify-content: center;
   align-items: center; }
 
 @media screen and (min-width: 1600px) {
   .business_pre img, .business_next img {
-    width: 44px;
-    height: 85px; } }
+    width: 36px;
+    height: 61px; } }
 @media (min-width: 1300px) and (max-width: 1600px) {
   .business_pre img, .business_next img {
     width: 30px;
-    height: 60px; } }
+    height: 61px; } }
 @media (min-width: 1000px) and (max-width: 1300px) {
   .business_pre img, .business_next img {
     width: 25px;
-    height: 50px; } }
+    height: 42px; } }
 @media screen and (max-width: 1000px) {
   .business_pre img, .business_next img {
     width: 20px;
-    height: 40px; } }
+    height: 34px; } }
 
 .business_pre img {
   margin-left: 50%; }
@@ -467,13 +459,11 @@ p {
 
 .business_pre {
   width: 12.5%;
-  height: 100%;
-  background-image: url("../images/business_bg1.png"); }
+  height: 100%; }
 
 .business_next {
   width: 12.5%;
-  height: 100%;
-  background-image: url("../images/business_bg8.png"); }
+  height: 100%; }
 
 @media screen and (min-width: 1600px) {
   .business_img {
@@ -706,7 +696,6 @@ p {
     height: 186px; } }
 
 .row6_bg {
-  background-color: #d1d1d1;
   width: 100%;
   /*height: 540px;*/
   min-width: 1000px;
@@ -716,35 +705,35 @@ p {
   align-items: center; }
   @media screen and (min-width: 1600px) {
     .row6_bg {
-      margin-top: 75px; } }
+      margin-top: 20px; } }
   @media (min-width: 1300px) and (max-width: 1600px) {
     .row6_bg {
-      margin-top: 65px; } }
+      margin-top: 17px; } }
   @media (min-width: 1000px) and (max-width: 1300px) {
     .row6_bg {
-      margin-top: 55px; } }
+      margin-top: 14px; } }
   @media screen and (max-width: 1000px) {
     .row6_bg {
-      margin-top: 40px; } }
+      margin-top: 10px; } }
 
 .row6 {
   width: 75%; }
   @media screen and (min-width: 1600px) {
     .row6 {
-      margin-top: 20px;
-      margin-bottom: 80px; } }
+      margin-top: 40px;
+      margin-bottom: 60px; } }
   @media (min-width: 1300px) and (max-width: 1600px) {
     .row6 {
-      margin-top: 17px;
-      margin-bottom: 70px; } }
+      margin-top: 32px;
+      margin-bottom: 50px; } }
   @media (min-width: 1000px) and (max-width: 1300px) {
     .row6 {
-      margin-top: 14px;
-      margin-bottom: 55px; } }
+      margin-top: 27px;
+      margin-bottom: 40px; } }
   @media screen and (max-width: 1000px) {
     .row6 {
-      margin-top: 10px;
-      margin-bottom: 40px; } }
+      margin-top: 20px;
+      margin-bottom: 30px; } }
 
 .row6 img {
   float: left; }
@@ -892,5 +881,105 @@ p {
   @media screen and (max-width: 1000px) {
     .fooder p {
       font-size: 13px; } }
+
+.coverLogo {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media screen and (min-width: 1600px) {
+    .coverLogo {
+      top: 25%;
+      margin-left: -180px; } }
+  @media (min-width: 1300px) and (max-width: 1600px) {
+    .coverLogo {
+      top: 22%;
+      margin-left: -150px; } }
+  @media (min-width: 1000px) and (max-width: 1300px) {
+    .coverLogo {
+      top: 18%;
+      margin-left: -120px; } }
+  @media screen and (max-width: 1000px) {
+    .coverLogo {
+      display: none; } }
+
+@media screen and (min-width: 1600px) {
+  .coverLogo img:first-of-type {
+    width: 70px;
+    height: 112px;
+    margin-bottom: 50px; } }
+@media (min-width: 1300px) and (max-width: 1600px) {
+  .coverLogo img:first-of-type {
+    width: 55px;
+    height: 88px;
+    margin-bottom: 35px; } }
+@media (min-width: 1000px) and (max-width: 1300px) {
+  .coverLogo img:first-of-type {
+    width: 40px;
+    height: 64px;
+    margin-bottom: 25px; } }
+@media screen and (max-width: 1000px) {
+  .coverLogo img:first-of-type {
+    width: 30px;
+    height: 48px;
+    margin-bottom: 15px; } }
+
+@media screen and (min-width: 1600px) {
+  .coverLogo img:last-of-type {
+    width: 170px;
+    height: 50px;
+    margin-bottom: 50px; } }
+@media (min-width: 1300px) and (max-width: 1600px) {
+  .coverLogo img:last-of-type {
+    width: 130px;
+    height: 38px;
+    margin-bottom: 35px; } }
+@media (min-width: 1000px) and (max-width: 1300px) {
+  .coverLogo img:last-of-type {
+    width: 100px;
+    height: 30px;
+    margin-bottom: 25px; } }
+@media screen and (max-width: 1000px) {
+  .coverLogo img:last-of-type {
+    width: 80px;
+    height: 23px;
+    margin-bottom: 15px; } }
+
+.slogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  letter-spacing: 8px; }
+  @media screen and (min-width: 1600px) {
+    .slogan {
+      width: 360px;
+      height: 60px;
+      font-size: 28px; } }
+  @media (min-width: 1300px) and (max-width: 1600px) {
+    .slogan {
+      width: 300px;
+      height: 50px;
+      font-size: 23px; } }
+  @media (min-width: 1000px) and (max-width: 1300px) {
+    .slogan {
+      width: 240px;
+      height: 40px;
+      font-size: 18px; } }
+  @media screen and (max-width: 1000px) {
+    .slogan {
+      width: 180px;
+      height: 30px;
+      font-size: 15px; } }
+
+.obj {
+  width: 100%;
+  height: 260px;
+  margin: 0px;
+  padding: 0px; }
 
 /*# sourceMappingURL=main.css.map */
