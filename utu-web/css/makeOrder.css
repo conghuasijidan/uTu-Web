@@ -106,7 +106,8 @@ body {
   padding-right: 10px;
   margin-right: 30px;
   font-size: 12px;
-  color: #666666; }
+  color: #666666;
+  cursor: pointer; }
 
 .meetTime {
   display: flex;

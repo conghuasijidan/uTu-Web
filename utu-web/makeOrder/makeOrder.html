@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="../css/makeOrder.css">
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=2.0&services=true"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=AsISzZEYKr763HqCEG3LgwZguiuIZfYE"></script>
+    <script src="../js/My97DatePicker/WdatePicker.js"></script>
 </head>
 <body>
    <div class="container">
@@ -35,23 +36,23 @@
            <div class="package">
                <div class="titleView"><span>套餐选择：</span></div>
                <div class="packageView">
-                   <div class="packageBG">套餐A:30张原片+8张精修+4小时</div>
-                   <div class="packageBG">套餐B:30张原片+8张精修+4小时</div>
+                   <div class="packageBG" id="packageA">套餐A:30张原片+8张精修+4小时</div>
+                   <div class="packageBG" id="packageB">套餐B:30张原片+8张精修+4小时</div>
                </div>
                <div class="meetTime">
                    <span class="title">集合时间：</span>
                    <div class="timeView">
                        <span class="top">选择</span>
-                       <div class="date">
-                           <span>出行日期</span>
-                           <img src="../images/makeorder_downArrow.png">
+                       <div class="date" onClick="WdatePicker({el:'meetDate',onpicked:pickedDate})">
+                           <span id="meetDate">出行日期</span>
+                           <img src="../images/makeorder_downArrow.png" id="dateArrow">
                        </div>
                    </div>
                    <div class="timeView">
                        <span class="top">选择</span>
-                       <div class="date">
-                           <span>出行时间</span>
-                           <img src="../images/makeorder_downArrow.png">
+                       <div class="date"  onClick="WdatePicker({el:'meetTime',onpicked:pickedTime,dateFmt: 'HH:mm'})">
+                           <span id="meetTime">出行时间</span>
+                           <img src="../images/makeorder_downArrow.png" id="timeArrow">
                        </div>
                    </div>
                </div>
@@ -87,6 +88,37 @@
             level:3
         }
     })
+    //  套餐选择
+    selectedID = '#packageA'
+    $(selectedID).css({'border':'1px solid #498fca','color': '#498fca'})
+    $('.packageBG').on('click',function () {
+        $(selectedID).css({'border':'1px solid #cccccc','color': '#666666'})
+        $(this).css({'border':'1px solid #498fca','color': '#498fca'})
+        var id = $(this).attr('id')
+        selectedID = '#'+id;
+    })
+
+
+
+    // 初始化日历控件
+    function createTime(){
+        WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'2017-12-01',maxDate:'2022-01-01'});
+    }
+    function pickedDate(){
+        $('#dateArrow').css('display','none');
+    }
+    function pickedTime(){
+        $('#timeArrow').css('display','none');
+    }
+
+//    创建订单
+    $('.submitButton').on('click',function () {
+
+
+
+    })
+
+
 
     // 百度地图API功能
     function G(id) {
@@ -94,7 +126,7 @@
     }
 
     var map = new BMap.Map("l-map");
-    map.centerAndZoom("北京",12);                   // 初始化地图,设置城市和地图级别。
+    map.centerAndZoom("杭州",12);                   // 初始化地图,设置城市和地图级别。
 
     var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
         {"input" : "suggestId"
