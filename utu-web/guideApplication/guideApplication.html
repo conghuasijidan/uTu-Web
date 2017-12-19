@@ -25,9 +25,17 @@
                </div>
                <div class="separateView"></div>
                <div class="addImages">
-                   <img src="../images/add_images.png">
-                   <img src="../images/add_images.png">
-                   <img src="../images/add_images.png">
+                   <div id="photo1" class="photo1">
+                      <img src="../images/add_images.png" class="photo" id="photoImg">
+                       <input type="file"  class="inputstyle">
+                   </div>
+                   <div id="photo2" class="photo2">
+                       <img src="../images/add_images.png" class="photo">
+                   </div>
+                   <div id="photo3" class="photo3">
+                       <img src="../images/add_images.png" class="photo">
+                   </div>
+
                </div>
            </div>
            <div class="blockView">
@@ -97,7 +105,31 @@
    </div>
 </body>
 <script>
+   $('#photo1').on('click',function () {
+       if (typeof FileReader === 'undefined') {
+           alert("浏览器版本过低，请先更新您的浏览器~");
 
+       } else {
+
+//           $('#file_input').click()
+           alert('hello')
+//           var file = this.files[0];
+//           if (!/image\/\w+/.test(file.type)) {
+//               alert("请上传一张图片~");
+//               return false;
+//           }
+//           var reader = new FileReader(); //声明一个FileReader实例
+
+
+           //最后在onload事件中，获取到成功读取的文件内容，并以插入一个img节点的方式显示选中的图片
+//           reader.onload = function(e) {
+//
+////               $('photoImg').css('src',e.target.result)
+//
+//           }
+//           reader.readAsDataURL(file); //调用readAsDataURL方法来读取选中的图像文件
+       }
+   })
 
 </script>
 </html>
