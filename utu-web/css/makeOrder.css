@@ -108,4 +108,109 @@ body {
   font-size: 12px;
   color: #666666; }
 
+.meetTime {
+  display: flex;
+  margin-top: 60px; }
+
+.title {
+  font-size: 18px;
+  color: #333333;
+  margin-left: 70px; }
+
+.timeView {
+  width: 140px;
+  height: 60px;
+  background-color: #f2f2f2;
+  border: 1px solid #cccccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px; }
+
+.timeView span {
+  font-size: 14px;
+  color: #666666; }
+
+.top {
+  margin-top: 5px;
+  margin-bottom: 3px; }
+
+.date {
+  display: flex;
+  align-items: center; }
+
+.date img {
+  width: 12px;
+  height: 7px; }
+
+.location {
+  display: flex;
+  margin-top: 40px;
+  align-items: center; }
+
+.locationInput {
+  width: 150px;
+  height: 28px;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+  outline: none;
+  padding-left: 5px;
+  margin-right: 1px;
+  font-size: 12px;
+  color: #333333; }
+
+.map {
+  width: 950px;
+  height: 350px;
+  background-color: orange;
+  margin-left: 160px;
+  margin-top: 20px; }
+
+.textView {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+.text {
+  width: 310px;
+  height: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #333333;
+  border: 1px solid #cccccc;
+  outline: none; }
+
+.priceView {
+  background-color: #ffffff;
+  width: 100%;
+  height: 120px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.priceView span {
+  font-size: 18px; }
+
+.priceView span:first-of-type {
+  margin-left: 70px;
+  color: #333333; }
+
+.priceView span:last-of-type {
+  color: #cd456c; }
+
+.submitButton {
+  width: 120px;
+  height: 40px;
+  background-color: #498fca;
+  font-size: 14px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-right: 80px; }
+
 /*# sourceMappingURL=makeOrder.css.map */
