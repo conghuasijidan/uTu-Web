@@ -6,6 +6,7 @@
     <link href="../css/guideApplication.css" rel="stylesheet">
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
 </head>
 <body>
    <div class="container">
@@ -25,15 +26,20 @@
                </div>
                <div class="separateView"></div>
                <div class="addImages">
-                   <div id="photo1" class="photo1">
-                      <img src="../images/add_images.png" class="photo" id="photoImg">
-                       <input type="file"  class="inputstyle">
+                   <div class="photo">
+                       <img src="../images/add_images.png" class="add-img" id="img1">
+                       <input  type="file" id="file1" class="file" onchange="showPreview(this,'img1')" accept="image/jpg,image/jpeg,image/png,image/bmp"  />
+                       <img src="../images/remove_img.png" class="removeImg" onclick="removeImg('img1')" id="remove1">
                    </div>
-                   <div id="photo2" class="photo2">
-                       <img src="../images/add_images.png" class="photo">
+                   <div class="photo">
+                       <img src="../images/add_images.png" class="add-img" id="img2">
+                       <input  type="file" id="file2" class="file" onchange="showPreview(this,'img2')" accept="image/jpg,image/jpeg,image/png,image/bmp"  />
+                       <img src="../images/remove_img.png" class="removeImg" onclick="removeImg('img2')" id="remove2">
                    </div>
-                   <div id="photo3" class="photo3">
-                       <img src="../images/add_images.png" class="photo">
+                   <div class="photo">
+                       <img src="../images/add_images.png" class="add-img" id="img3">
+                       <input  type="file" id="file3" class="file" onchange="showPreview(this,'img3')" accept="image/jpg,image/jpeg,image/png,image/bmp"  />
+                       <img src="../images/remove_img.png" class="removeImg" onclick="removeImg('img3')" id="remove3">
                    </div>
 
                </div>
@@ -54,11 +60,21 @@
                <div class="separateView"></div>
                <div class="idadd">
                    <div class="idadd_desc"><span>正面</span></div>
-                   <img src="../images/add_images.png">
+                   <div class="photo">
+                       <img src="../images/add_images.png" class="add-img" id="identity1">
+                       <input  type="file" id="identityFile1" class="file" onchange="showPreview(this,'identity1')" accept="image/jpg,image/jpeg,image/png,image/bmp"  />
+                       <img src="../images/remove_img.png" class="removeImg" onclick="removeImg('identity1')" id="identityRemove1">
+                   </div>
+                   <!--<img src="../images/add_images.png">-->
                </div>
                <div class="idadd">
                    <div class="idadd_desc"><span>反面</span></div>
-                   <img src="../images/add_images.png">
+                   <div class="photo">
+                       <img src="../images/add_images.png" class="add-img" id="identity2">
+                       <input  type="file" id="identityFile2" class="file" onchange="showPreview(this,'identity2')" accept="image/jpg,image/jpeg,image/png,image/bmp"  />
+                       <img src="../images/remove_img.png" class="removeImg" onclick="removeImg('identity2')" id="identityRemove2">
+                   </div>
+                   <!--<img src="../images/add_images.png">-->
                </div>
            </div>
            <div class="blockView">
@@ -75,9 +91,22 @@
                </div>
                <div class="separateView"></div>
                <div class="addImages">
-                   <img src="../images/add_images.png">
-                   <img src="../images/add_images.png">
-                   <img src="../images/add_images.png">
+                   <div class="photo">
+                       <img src="../images/add_images.png" class="add-img" id="cer1">
+                       <input  type="file" id="cerFile1" class="file" onchange="showPreview(this,'cer1')" accept="image/jpg,image/jpeg,image/png,image/bmp"  />
+                       <img src="../images/remove_img.png" class="removeImg" onclick="removeImg('cer1')" id="cerRemove1">
+                   </div>
+                   <div class="photo">
+                       <img src="../images/add_images.png" class="add-img" id="cer2">
+                       <input  type="file" id="cerFile2" class="file" onchange="showPreview(this,'cer2')" accept="image/jpg,image/jpeg,image/png,image/bmp"  />
+                       <img src="../images/remove_img.png" class="removeImg" onclick="removeImg('cer2')" id="cerRemove2">
+                   </div>
+                   <div class="photo">
+                       <img src="../images/add_images.png" class="add-img" id="cer3">
+                       <input  type="file" id="cerFile3" class="file" onchange="showPreview(this,'cer3')" accept="image/jpg,image/jpeg,image/png,image/bmp"  />
+                       <img src="../images/remove_img.png" class="removeImg" onclick="removeImg('cer3')" id="cerRemove3">
+                   </div>
+
                </div>
            </div>
            <div class="blockView">
@@ -94,7 +123,17 @@
                </div>
                <div class="separateView"></div>
                <div class="addImages">
-                   <img src="../images/add_images.png">
+                   <div class="photo">
+                       <img src="../images/add_voice.png" class="add-img" id="voice">
+                       <div class="voice">
+                            <img src="../images/voice_plate.png" id="plate">
+                            <img src="../images/voice_wave.png" id="wave">
+                           <div class="tryVoice" style="cursor: pointer;">试听</div>
+                       </div>
+                       <audio src=""  id="audio" ></audio>
+                       <input type="file"  id="voiceFile" class="file" title="" onchange="showPreview(this,'voice')" accept="audio/*" />
+                       <img src="../images/remove_img.png" class="removeImg" onclick="removeImg('voice')" id="voiceRemove">
+                   </div>
                </div>
            </div>
            <div class="applicationBg">
@@ -105,31 +144,172 @@
    </div>
 </body>
 <script>
-   $('#photo1').on('click',function () {
-       if (typeof FileReader === 'undefined') {
+    function showPreview(source,imgId) {
+
+        var file = source.files[0];
+        if (typeof FileReader === 'undefined') {
            alert("浏览器版本过低，请先更新您的浏览器~");
 
        } else {
+//            判断选择的是否是照片 这一步不起作用了，input 类型已经做了限制
+//            if(!/image\/\w+/.test(file.type)){
+//                alert("请确保文件为图像类型");
+//                return false;
+//            }
 
-//           $('#file_input').click()
-           alert('hello')
-//           var file = this.files[0];
-//           if (!/image\/\w+/.test(file.type)) {
-//               alert("请上传一张图片~");
-//               return false;
-//           }
-//           var reader = new FileReader(); //声明一个FileReader实例
+            var fr = new FileReader();
+            fr.readAsDataURL(file);
+            fr.onloadend = function(e) {
+                switch (imgId)
+                {
+
+                    case 'img1':{
+                     $('#img1').attr('src',e.target.result)
+                     $('#remove1').css('display','block')
+                        break;
+                    }
+                    case 'img2':{
+                        $('#img2').attr('src',e.target.result)
+                        $('#remove2').css('display','block')
+                        break;
+                    }
+                    case 'img3':{
+                        $('#img3').attr('src',e.target.result)
+                        $('#remove3').css('display','block')
+                        break;
+                    }
+                    case 'identity1':{
+                        $('#identity1').attr('src',e.target.result).css('width','360px')
+                        $('#identityRemove1').css('display','block')
+                        break;
+                    }
+                    case 'identity2':{
+                        $('#identity2').attr('src',e.target.result).css('width','360px')
+                        $('#identityRemove2').css('display','block')
+                        break;
+                    }
+                    case 'cer1':{
+                        $('#cer1').attr('src',e.target.result)
+                        $('#cerRemove1').css('display','block')
+                        break;
+                    }
+                    case 'cer2':{
+                        $('#cer2').attr('src',e.target.result)
+                        $('#cerRemove2').css('display','block')
+                        break;
+                    }
+                    case 'cer3':{
+                        $('#cer3').attr('src',e.target.result)
+                        $('#cerRemove3').css('display','block')
+                        break;
+                    }
+                    case 'voice':{
+                        $('#audio').attr('src',e.target.result)
+                        $('#voiceRemove').css('display','block')
+                        $('#voice').css('display','none')
+                        $('#voiceFile').css('z-index','-1')
+                        $('.voice').css('display','flex')
+                        break;
+                    }
+
+                }
+
+//                e.target.result 上传到服务器
+//                console.log(e.target.result)
+
+            };
 
 
-           //最后在onload事件中，获取到成功读取的文件内容，并以插入一个img节点的方式显示选中的图片
-//           reader.onload = function(e) {
-//
-////               $('photoImg').css('src',e.target.result)
-//
-//           }
-//           reader.readAsDataURL(file); //调用readAsDataURL方法来读取选中的图像文件
        }
+
+    }
+    function removeImg(removeImgId) {
+        var id = '#'+removeImgId
+        switch (removeImgId)
+        {
+
+            case 'img1':{
+                $('#remove1').css('display','none')
+//                清空input
+                $('#file1').val("")
+                $(id).attr('src','../images/add_images.png')
+                break;
+            }
+            case 'img2':{
+                $('#remove2').css('display','none')
+//                清空input
+                $('#file2').val("")
+                $('#img2').attr('src','../images/add_images.png')
+                break;
+            }
+            case 'img3':{
+                $('#remove3').css('display','none')
+//                清空input
+                $('#file3').val("")
+                $('#img3').attr('src','../images/add_images.png')
+                break;
+            }
+            case 'identity1':{
+                $('#identityFile1').val("")
+                $('#identity1').attr('src','../images/add_images.png').css('width','220px')
+                $('#identityRemove1').css('display','none')
+                break;
+            }
+            case 'identity2':{
+                $('#identityFile2').val("")
+                $('#identity2').attr('src','../images/add_images.png').css('width','220px')
+                $('#identityRemove2').css('display','none')
+                break;
+            }
+            case 'cer1':{
+                $('#cerRemove1').css('display','none')
+                $('#cerFile1').val("")
+                $('#cer1').attr('src','../images/add_images.png')
+                break;
+            }
+            case 'cer2':{
+                $('#cerRemove2').css('display','none')
+                $('#cerFile2').val("")
+                $('#cer2').attr('src','../images/add_images.png')
+                break;
+            }
+            case 'cer3':{
+                $('#cerRemove3').css('display','none')
+                $('#cerFile3').val("")
+                $('#cer3').attr('src','../images/add_images.png')
+                break;
+            }
+            case 'voice':{
+                $('#voiceRemove').css('display','none')
+                $('#voice').css('display','block')
+                $('#voiceFile').css('z-index','100').val("")
+                $('.voice').css('display','none')
+                var audio = document.getElementById("audio");
+                audio.pause()
+                break;
+            }
+        }
+
+    }
+    $('.tryVoice').on('click',function () {
+        var audio = document.getElementById("audio");
+        audio.play()
+//   加入动画
+        $('#plate').addClass('rotate')
+
+    })
+    $('#audio').on('ended',function () {
+//       移除动画
+        $('#plate').removeClass('rotate')
+    })
+
+//    提交申请
+   $('.applicationButton').on('click',function () {
+
+
+
    })
+
 
 </script>
 </html>

@@ -88,18 +88,20 @@ body{
   align-items: center;
   justify-content: center;
 }
-.photo{
+.add-img{
   width: 220px;
   height: 220px;
 }
-#photo1{
-  margin-right: 35px;
+.photo{
   position: relative;
 }
-#photo3{
+.addImages .photo:first-of-type{
+  margin-right: 35px;
+}
+.addImages .photo:last-of-type{
   margin-left: 35px;
 }
-.inputstyle{
+.file{
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -113,12 +115,14 @@ body{
   top: 0px;
   //background-color: orange;
 }
-//.addImages .photo:first-of-type{
-//
-//}
-//.addImages .photo:last-of-type{
-//
-//}
+.removeImg{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: none;
+}
 .IDinfo{
   display: flex;
   width: 100%;
@@ -151,10 +155,7 @@ body{
   font-size: 18px;
   color: #498fca;
 }
-.idadd img{
-  width: 220px;
-  height: 220px;
-}
+
 .blockView .idadd:last-of-type{
   margin-bottom: 40px;
 }
@@ -184,6 +185,57 @@ body{
 .audioInfo .desc{
   margin-top: 0px;
 }
+.voice{
+  width: 220px;
+  height: 220px;
+  background-color: rgba(73,143,202,0.1);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+#plate{
+  margin-top: 20px;
+  width: 84px;
+  height: 84px;
+
+}
+.rotate{
+  -webkit-animation: rotating 2.0s linear infinite;
+  -moz-animation: rotating 2.0s linear infinite;
+  -o-animation: rotating 2.0s linear infinite;
+  animation: rotating 2.0s linear infinite
+}
+@-webkit-keyframes rotating {
+     from { -webkit-transform: rotate(0) }
+     to { -webkit-transform: rotate(360deg) }
+ }
+
+ @keyframes rotating {
+     from { transform: rotate(0) }
+     to { transform: rotate(360deg) }
+ }
+ @-moz-keyframes rotating {
+     from { -moz-transform: rotate(0) }
+     to { -moz-transform: rotate(360deg) }
+ }
+#wave{
+  width: 183px;
+  height: 35px;
+}
+.tryVoice{
+  font-size: 14px;
+  color: #FFFFFF;
+  width: 120px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: #498fca;
+  margin-top: 20px;
+
+}
+
 .applicationBg{
   background-color: #ffffff;
   width: 100%;
