@@ -5,35 +5,35 @@
     <title>评价</title>
     <link rel="stylesheet" href="../css/comment.css">
     <script src="../js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
+<iframe id="naviframe" src="../navigation/navigation.html" frameborder="0" scrolling="no" class="nav"></iframe>
+<iframe src="../orderTool/orderTool.html" frameborder="0" scrolling="no" class="orderTool"></iframe>
  <div class="container">
       <div class="content">
         <div class="orderInfo">
-            <img src="../images/cellAvatar.png">
+            <img :src="info.avatar">
             <div class="info">
-                <span>雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔</span>
-                <span>2017-12-12</span>
+                <span>{{info.name}}</span>
+                <span>{{info.time}}</span>
+                <span>{{info.location}}</span>
             </div>
         </div>
         <span class="desc">本次旅行经验如何？立即评价为其他用户提供信息吧！</span>
         <div class="impress">
-            <span>我的总体评价：</span>
+            <span class="impressTitle">我的总体评价：</span>
             <div class="attitude">
-                <div>差</div>
-                <div>一般</div>
-                <div>满意</div>
-                <div>强烈推荐</div>
+                <div><span class="overComment" id="comment1">差</span></div>
+                <div ><span class="overComment" id="comment2">一般</span></div>
+                <div><span class="overComment" id="comment3">满意</span></div>
+                <div><span class="overComment" id="comment4">强烈推荐</span></div>
             </div>
         </div>
-        <div class="star">
+        <div class="starTitle">
             <span>服务星级：</span>
             <div class="starImg">
-                <img src="../images/comment_star_selected.png"></img>
-                <img src="../images/comment_star_selected.png"></img>
-                <img src="../images/comment_star_selected.png"></img>
-                <img src="../images/comment_star_selected.png"></img>
-                <img src="../images/comment_star_selected.png"></img>
+                <img :src="starSrc[n-1]" class="star" onclick="star(this)" v-bind:index="n" v-for="n in star"></img>
             </div>
         </div>
         <span class="desc">途友服务怎么样？这次旅行是否愉快？（写够15字，才是好同志~）</span>
@@ -42,14 +42,61 @@
             <span>最多上传9张照片，按住Ctrl或Shift可选择多张</span>
         </div>
         <textarea class="commentContent" ></textarea>
-        <span class="noti">*请上传原创、真实、合法的图片，如果发现用户上传的图片有侵权内容，友途有权先行删除</span>
+        <div class="noti">*请上传原创、真实、合法的图片，如果发现用户上传的图片有侵权内容，友途有权先行删除</div>
           <div class="button">
               <div class="modifyButton">发表评价</div>
           </div>
       </div>
  </div>
+<iframe src="../footer/footer.html" frameborder="0" scrolling="no" class="footer"></iframe>
+<!--<object class="footer" type="text/html" data="../footer/footer.html" ></object>-->
 </body>
 <script>
+
+    var vm = new Vue({
+        el:'.content',
+        data:{
+            info:{
+                avatar:'../images/cellAvatar.png',
+                name:'球球',
+                time:'2017-12-12 08:00',
+                location:'西湖之畔 雷锋塔下 不见不散'
+
+            },
+            star:5,
+            starSrc:['../images/comment_star_normal.png','../images/comment_star_normal.png','../images/comment_star_normal.png','../images/comment_star_normal.png','../images/comment_star_normal.png']
+
+        }
+    })
+
+//    总体评论
+    var attitude = ''
+    $('.overComment').addClass('overCommentSub')
+    $('.overComment').on('click',function () {
+        $(attitude).addClass('overCommentSub')
+        $(attitude).css({'background-color':'#ffffff','color':'#999999'})
+        $(this).css({'background-color':'#498fca','color':'#fff'})
+        $(this).removeClass('overCommentSub')
+        attitude = '#'+ $(this).attr('id')
+    })
+
+//    星级评价
+    function star(obj) {
+      var index = $(obj).attr('index')
+
+        for (var i=0;i<5;i++){
+          if (i<index){
+              vm.$set(vm.starSrc,i,'../images/comment_star_selected.png')
+          }else{
+              vm.$set(vm.starSrc,i,'../images/comment_star_normal.png')
+          }
+
+
+        }
+
+    }
+
+
     $(".upload").on('click',function () {
         alert('选择本地图片')
     })

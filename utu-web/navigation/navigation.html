@@ -30,6 +30,7 @@
             </ul>
         </div>
     </div>
+
 </nav>
 
 
@@ -47,10 +48,7 @@
         }
     })
     $(".submenu").mouseleave(function (e) {
-
         submenuHover()
-
-
     })
     function submenu() {
         var left = $(".avatarView").offset().left;
@@ -58,6 +56,9 @@
         $(".avatarView").children('span').css('color','#498fca')
         $(".avatarView").children('div').attr('class','arrowimg-hover')
         $('.submenu').css({'left':left,'display':'block'});
+
+        $('#naviframe', window.parent.document).css('height','220px')
+
 //        $('.obj').css('z-index','20');
 //        alert("submenu 出现 left ="+left);
 //        alert($('.submenu').css('display'))
@@ -67,6 +68,7 @@
         $(".avatarView").children('span').css('color','#333')
         $(".avatarView").children('div').attr('class','arrowimg')
         $('.submenu').css('display','none');
+        $('#naviframe', window.parent.document).css('height','60px')
 //        $('.obj').css('z-index','-1');
     }
     /**
@@ -125,11 +127,11 @@
                 return;
             }
             var parent = $(selectedId).parent()
-            parent.css({"background-color":"#fff","border-bottom":"0px","pointer-events":"auto"})
+            parent.css({"background-color":"#f7f7f7","border-bottom":"0px","pointer-events":"auto"})
             $(selectedId).css("color","#333")
 
             $(this).css({"pointer-events":"none","background-color":"#498fca"})
-            $(id).css("color","#fff")
+            $(id).css("color","#ffffff")
             selectedId = id
 
         });

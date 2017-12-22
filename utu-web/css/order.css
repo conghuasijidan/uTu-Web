@@ -1,14 +1,15 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  height: 100%; }
 
-.obj {
+.nav {
   border: 0px;
   margin: 0px;
   padding: 0px;
   width: 100%;
-  height: 220px;
+  height: 60px;
   position: absolute;
   left: 0px;
   top: 0px; }
@@ -21,13 +22,12 @@ body {
   align-items: center;
   margin-top: 60px; }
 
-ul {
-  margin: 0;
+.tool ul {
+  margin-left: 20%;
   padding: 0;
   list-style: none; }
 
 .tool li:first-of-type {
-  margin-left: 390px;
   color: #498fca; }
 
 .tool li {
@@ -50,6 +50,10 @@ ul {
 
 .status li:first-of-type, .settingTool li:first-of-type {
   color: #333333; }
+
+.status ul {
+  padding: 0;
+  list-style: none; }
 
 .status li, .settingTool li {
   font-size: 16px;
@@ -194,5 +198,12 @@ ul {
   margin-left: 115px;
   margin-top: 40px;
   display: none; }
+
+.footer {
+  width: 100%;
+  height: 260px; }
+
+.container {
+  min-height: 690px; }
 
 /*# sourceMappingURL=order.css.map */

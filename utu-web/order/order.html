@@ -5,92 +5,88 @@
     <title>订单</title>
     <link rel="stylesheet" href="../css/order.css">
     <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-<!--<iframe id="naviframe" src="../navigation/navigation.html" frameborder="0" scrolling="no" width="1920px" height="60px"></iframe>-->
-<object class="obj" type="text/html" data="../navigation/navigation.html" ></object>
-<div class="tool">
-   <ul>
-       <li id="li1" class="">旅行纪念订单</li>
-       <li id="li2">旅行管家订单</li>
-       <li id="li3">设置</li>
-   </ul>
-</div>
-<div class="order">
-    <div class="status">
-       <ul>
-           <li id="status1" >申请中</li>
-           <li id="status2">进行中</li>
-           <li id="status3">已完成</li>
-       </ul>
-    </div>
-    <div class="cellList">
-        <div class="cell" id="normalOrder">
-            <div class="orderStatus">
-                <span>待支付：198.0元</span>
-                <span>未付款</span>
+
+    <iframe id="naviframe" src="../navigation/navigation.html" frameborder="0" scrolling="no" class="nav"></iframe>
+    <div class="container">
+        <div class="tool">
+           <ul >
+               <li id="li1" class="">旅行纪念订单</li>
+               <li id="li2">旅行管家订单</li>
+               <li id="li3">设置</li>
+           </ul>
+        </div>
+        <div class="order">
+            <div class="status">
+               <ul>
+                   <li id="status1" >申请中</li>
+                   <li id="status2">进行中</li>
+                   <li id="status3">已完成</li>
+               </ul>
             </div>
-            <div class="content">
-                <img src="../images/cellAvatar.png">
-                <div class="info">
-                    <span> 途友 球球</span>
-                    <span > 2017-12-12</span>
-                    <span >雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔</span>
+            <div class="cellList">
+                <div class="cell" id="normalOrder">
+                    <div class="orderStatus">
+                        <span>待支付：198.0元</span>
+                        <span>未付款</span>
+                    </div>
+                    <div class="content">
+                        <img src="../images/cellAvatar.png">
+                        <div class="info">
+                            <span> 途友 球球</span>
+                            <span > 2017-12-12</span>
+                            <span >雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell" id="managerOrder">
+                    <div class="orderStatus">
+                        <span>待支付：198.0元</span>
+                        <span>未付款</span>
+                    </div>
+                    <div class="location">
+                        <span>杭州-三亚</span>
+                    </div>
+                    <div class="time">
+                        <span>2017-12-01 出游/5天定制游</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="cell" id="managerOrder">
-            <div class="orderStatus">
-                <span>待支付：198.0元</span>
-                <span>未付款</span>
+        <div class="setting">
+            <div class="settingTool">
+                <ul>
+                    <li id="setting1" >修改密码</li>
+                    <li id="setting2">绑定微信</li>
+                </ul>
             </div>
-            <div class="location">
-                <span>杭州-三亚</span>
+            <div class="pwd" id="pwd">
+                 <span class="dic">密码长度6-16位，由英文字母（区分大小写）、数字0-9、特殊字符，至少两种组合而成</span>
+                 <div class="inputView">
+                     <span>原始密码</span>
+                     <input type="text" placeholder="请填写原始密码">
+                 </div>
+                <div class="inputView">
+                    <span>新的密码</span>
+                    <input type="text" placeholder="请填写新的密码">
+                </div>
+                <div class="inputView">
+                    <span>确认密码</span>
+                    <input type="text" placeholder="请确认新密码">
+                </div>
             </div>
-            <div class="time">
-                <span>2017-12-01 出游/5天定制游</span>
+            <div class="bindWX" id="bindWX">
+
             </div>
         </div>
     </div>
-</div>
-<div class="setting">
-    <div class="settingTool">
-        <ul>
-            <li id="setting1" >修改密码</li>
-            <li id="setting2">绑定微信</li>
-        </ul>
-    </div>
-    <div class="pwd" id="pwd">
-         <span class="dic">密码长度6-16位，由英文字母（区分大小写）、数字0-9、特殊字符，至少两种组合而成</span>
-         <div class="inputView">
-             <span>原始密码</span>
-             <input type="text" placeholder="请填写原始密码">
-         </div>
-        <div class="inputView">
-            <span>新的密码</span>
-            <input type="text" placeholder="请填写新的密码">
-        </div>
-        <div class="inputView">
-            <span>确认密码</span>
-            <input type="text" placeholder="请确认新密码">
-        </div>
-    </div>
-    <div class="bindWX" id="bindWX">
 
-    </div>
-
-</div>
-
+    <iframe src="../footer/footer.html" frameborder="0" scrolling="no" class="footer"></iframe>
+<!--<object class="footer" type="text/html" data="../footer/footer.html" ></object>-->
 </body>
 <script>
-// $('.obj').mouseenter(function () {
-//
-//     $(this).css('height','220px');
-// })
-// $('.tool').on("mouseover",function (event) {
-//     alert('lai')
-//     $('.obj').css('height','60px');
-// })
 
 
    // tool
