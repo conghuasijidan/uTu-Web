@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>公司信息</title>
+    <title>关于我们</title>
     <link href="../css/company.css" rel="stylesheet">
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="https://unpkg.com/vue"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
 <body>
+<iframe id="naviframe" src="../navigation/navigation.html" frameborder="0" scrolling="no" class="nav"></iframe>
     <div class="tool">
         <ul>
             <li id="li1" >关于我们</li>
@@ -118,7 +119,7 @@
             <div class="map" id="myMap"></div>
         </div>
     </div>
-    <object class="obj" type="text/html" data="../footer/footer.html" ></object>
+<iframe src="../footer/footer.html" frameborder="0" scrolling="no" class="footer"></iframe>
 </body>
 <script>
     var vm = new Vue({
@@ -158,6 +159,14 @@
                 }]
         }
     })
+    //   修改导航栏选中
+    var naviframe = document.getElementById('naviframe')
+    naviframe.onload = function () {
+
+        naviframe.contentWindow.navChange('#a4');
+    }
+
+
     var toolSelected = '#li1';
     $('.tool li').on('click',function(){
 //        上一次选中的页面消失

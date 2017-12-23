@@ -9,6 +9,7 @@
 
 </head>
 <body>
+<iframe id="naviframe" src="../navigation/navigation.html" frameborder="0" scrolling="no" class="nav"></iframe>
    <div class="container">
        <div class="content">
            <div class="blockView">
@@ -142,17 +143,26 @@
        </div>
 
    </div>
+<iframe src="../footer/footer.html" frameborder="0" scrolling="no" class="footer"></iframe>
+
 </body>
 <script>
-//    存放照片
-    var imgArr = []
-//    存放身份证
-    var identityArr = []
-    //    存放导游证
-    var cerArr = []
-//    存放音频
-    var selfAudio = ''
+    //    存放照片
+        var imgArr = []
+    //    存放身份证
+        var identityArr = []
+        //    存放导游证
+        var cerArr = []
+    //    存放音频
+        var selfAudio = ''
 
+
+    //   修改导航栏选中
+    var naviframe = document.getElementById('naviframe')
+    naviframe.onload = function () {
+
+        naviframe.contentWindow.navChange('#a5');
+    }
 
     function showPreview(source,imgId) {
 

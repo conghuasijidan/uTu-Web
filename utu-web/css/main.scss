@@ -2,129 +2,129 @@ body{
   padding: 0px;
   margin: 0px;
 }
-.navgation{
-  height: 60px;
-  width: 100%;
-  background-color: #f7f7f7;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  z-index: 1000;
-  min-width: 1000px;
-}
-.logo{
-  margin-left: 12.2%;
-}
-.first{
-  margin-left: 40px;
-}
-.last{
-  width: 140px;
-  height: 100%;
-  background-color: white;
-  padding-left: 0px;
-  @media screen and (min-width: 1600px){
-    margin-left: 460px;
-  }
-  @media (min-width: 1300px) and (max-width: 1600px){
-    margin-left: 350px;
-  }
-  @media (min-width: 1000px) and (max-width: 1300px){
-    margin-left: 250px;
-  }
-  @media screen and (max-width: 1000px){
-    margin-left: 200px;
-  }
-}
-.avatarView{
-  width: 100%;
-  height: 100%;
-  background-color: #f7f7f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-.avatarView:hover{
-  background-color: #ffffff;
-}
-.avatarView:hover span{
-  color: #498fca;
-}
-.avatarView:hover .arrowimg{
-  background-image: url("../images/down_bluearrow.png");
-}
-.avatarView span{
-
-  margin-right: 0px;
-  font-size: 14px;
-  color: #333;
-  width: 60px;
-  margin-left: 5px;
-}
-.avatarimg{
-  width: 36px;
-  height: 36px;
-
-}
-.arrowimg{
-  width: 14px;
-  height: 9px;
-  background-image: url("../images/down_blackarrow.png");
-}
-.arrowimg-hover{
-  width: 14px;
-  height: 9px;
-  background-image: url("../images/down_bluearrow.png");
-}
-.submenu{
-  width: 140px;
-  height: 140px;
-  background-color: #ffffff;
-  display: none;
-  position: absolute;
-  left: 0px;
-  right: 60px;
-  z-index: 20;
-}
-.submenu li{
-  background-color: #ffffff;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  color: #498fca;
-}
-ul{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.submenu li:hover{
-  background-color: #498fca;
-  color: #ffffff;
-}
-.navgation a{
-  /*display: block;*/
-  font-size: 14px;
-  color: #333;
-  text-decoration: none;
-}
-
-.navButton{
-  ///*background-color: brown;*/
-  border:0px;
-  height: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+//.navgation{
+//  height: 60px;
+//  width: 100%;
+//  background-color: #f7f7f7;
+//  display: flex;
+//  align-items: center;
+//  position: fixed;
+//  left: 0px;
+//  top: 0px;
+//  z-index: 1000;
+//  min-width: 1000px;
+//}
+//.logo{
+//  margin-left: 12.2%;
+//}
+//.first{
+//  margin-left: 40px;
+//}
+//.last{
+//  width: 140px;
+//  height: 100%;
+//  background-color: white;
+//  padding-left: 0px;
+//  @media screen and (min-width: 1600px){
+//    margin-left: 460px;
+//  }
+//  @media (min-width: 1300px) and (max-width: 1600px){
+//    margin-left: 350px;
+//  }
+//  @media (min-width: 1000px) and (max-width: 1300px){
+//    margin-left: 250px;
+//  }
+//  @media screen and (max-width: 1000px){
+//    margin-left: 200px;
+//  }
+//}
+//.avatarView{
+//  width: 100%;
+//  height: 100%;
+//  background-color: #f7f7f7;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//
+//}
+//.avatarView:hover{
+//  background-color: #ffffff;
+//}
+//.avatarView:hover span{
+//  color: #498fca;
+//}
+//.avatarView:hover .arrowimg{
+//  background-image: url("../images/down_bluearrow.png");
+//}
+//.avatarView span{
+//
+//  margin-right: 0px;
+//  font-size: 14px;
+//  color: #333;
+//  width: 60px;
+//  margin-left: 5px;
+//}
+//.avatarimg{
+//  width: 36px;
+//  height: 36px;
+//
+//}
+//.arrowimg{
+//  width: 14px;
+//  height: 9px;
+//  background-image: url("../images/down_blackarrow.png");
+//}
+//.arrowimg-hover{
+//  width: 14px;
+//  height: 9px;
+//  background-image: url("../images/down_bluearrow.png");
+//}
+//.submenu{
+//  width: 140px;
+//  height: 140px;
+//  background-color: #ffffff;
+//  display: none;
+//  position: absolute;
+//  left: 0px;
+//  right: 60px;
+//  z-index: 20;
+//}
+//.submenu li{
+//  background-color: #ffffff;
+//  width: 100%;
+//  height: 40px;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  font-size: 14px;
+//  color: #498fca;
+//}
+//ul{
+//  margin: 0;
+//  padding: 0;
+//  list-style: none;
+//}
+//.submenu li:hover{
+//  background-color: #498fca;
+//  color: #ffffff;
+//}
+//.navgation a{
+//  /*display: block;*/
+//  font-size: 14px;
+//  color: #333;
+//  text-decoration: none;
+//}
+//
+//.navButton{
+//  ///*background-color: brown;*/
+//  border:0px;
+//  height: 100%;
+//  padding-left: 16px;
+//  padding-right: 16px;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//}
 
 
 .row1{
@@ -585,11 +585,16 @@ p{
 
   /*background-color: beige;*/
 }
+.cellBg{
+  //align-items: center;
+}
 .cell{
 
   height: auto;
   //background-color: #5cb85c;
   float: left;
+  margin-right: 12px;
+
   @media screen and (min-width: 1000px){
 
   }
@@ -598,6 +603,7 @@ p{
     margin-top: 44px;
     //width: 460px;
     width: 32%;
+
   }
   @media (min-width: 1300px) and (max-width: 1600px){
     margin-top: 36px;
@@ -1118,4 +1124,16 @@ p{
   height: 260px;
   margin: 0px;
   padding: 0px;
+}
+
+.nav{
+  border:0px;
+  margin: 0px;
+  padding: 0px;
+  width:100%;
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1000;
 }

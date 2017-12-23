@@ -16,29 +16,9 @@
 
 </head>
 <body>
-     <nav class="navgation" >
-         <img src="images/nav_logo.png" class="logo">
-         <div class="navButton first" ><a  href="#row1" id="a1">首页</a></div>
-         <div class="navButton" ><a href="#row2" id="a2">旅行纪念</a></div>
-         <div class="navButton" ><a href="#row3" id="a3">旅行管家</a></div>
-         <div class="navButton" ><a href="#row5" id="a5">成为途友</a></div>
-         <div class="last" >
-             <!--<a href="#" id="a6">请登录</a>-->
-             <div class="avatarView">
-                 <img src="images/avatar.png" class="avatarimg">
-                 <span>接地气啊</span>
-                 <div class="arrowimg"></div>
-             </div>
-             <div class="submenu">
-                 <ul>
-                     <li>旅行纪念订单</li>
-                     <li>旅行管家订单</li>
-                     <li>设置</li>
-                     <li>退出</li>
-                 </ul>
-             </div>
-         </div>
-     </nav>
+
+     <iframe id="naviframe" name="naviframe" src="navigation/navigation.html" frameborder="0" scrolling="no" class="nav"></iframe>
+
      <div  class="row1" id="row1">
          <div class="swiper-container"  >
              <div class="swiper-wrapper">
@@ -89,75 +69,23 @@
          <div><p>热门途友推荐<span>Hot Tour Guide Recommended</span></p></div>
      </div>
      <div class="row5">
-         <div>
-             <div class="cell cell_margin">
-                 <img src="images/guide1.png">
-                 <div class="list1"><span>莎莎莎</span><span>88元/小时（4小时起订）</span></div>
+         <div class="cellBg">
+             <div class="cell " v-for="item in recommendGuides">
+                 <img :src="item.avatar">
+                 <div class="list1"><span>{{item.name}}</span><span>{{item.price}}元/小时（4小时起订）</span></div>
                  <div class="list2">友途网认证导游</div>
                  <div class="shortSeperate" >
-                     <div>大胆 聪明 内敛 有导游证</div>
-                     <div>爱好 唱歌 跳舞</div>
+                     <div>{{item.tags}}</div>
+                     <div>{{item.description}}</div>
                  </div>
              </div>
-             <div class="cell cell_margin">
-                 <img src="images/guide1.png">
-                 <div class="list1"><span>莎莎莎</span><span>88元/小时（4小时起订）</span></div>
-                 <div class="list2">友途网认证导游</div>
-                 <div class="shortSeperate" >
-                     <div>大胆 聪明 内敛 有导游证</div>
-                     <div>爱好 唱歌 跳舞</div>
-                 </div>
-             </div>
-             <div class="cell">
-                 <img src="images/guide1.png">
-                 <div class="list1"><span>莎莎莎</span><span>88元/小时（4小时起订）</span></div>
-                 <div class="list2">友途网认证导游</div>
-                 <div class="shortSeperate" >
-                     <div>大胆 聪明 内敛 有导游证</div>
-                     <div>爱好 唱歌 跳舞</div>
-                 </div>
-             </div>
-             <div class="cell cell_margin">
-                 <img src="images/guide1.png">
-                 <div class="list1"><span>莎莎莎</span><span>88元/小时（4小时起订）</span></div>
-                 <div class="list2">友途网认证导游</div>
-                 <div class="shortSeperate" >
-                     <div>大胆 聪明 内敛 有导游证</div>
-                     <div>爱好 唱歌 跳舞</div>
-                 </div>
-             </div>
-             <div class="cell cell_margin">
-                 <img src="images/guide1.png">
-                 <div class="list1"><span>莎莎莎</span><span>88元/小时（4小时起订）</span></div>
-                 <div class="list2">友途网认证导游</div>
-                 <div class="shortSeperate" >
-                     <div>大胆 聪明 内敛 有导游证</div>
-                     <div>爱好 唱歌 跳舞</div>
-                 </div>
-             </div>
-             <div class="cell">
-                 <img src="images/guide1.png">
-                 <div class="list1"><span>莎莎莎</span><span>88元/小时（4小时起订）</span></div>
-                 <div class="list2">友途网认证导游</div>
-                 <div class="shortSeperate" >
-                     <div>大胆 聪明 内敛 有导游证</div>
-                     <div>爱好 唱歌 跳舞</div>
-                 </div>
-             </div>
+
          </div>
      </div>
      <div class="insert_img">
          <img src="images/row5_show.png">
      </div>
-     <!--<div class="seperateView" id="row2">-->
-         <!--<div><p>用户体验<span>User Experience</span></p></div>-->
-     <!--</div>-->
-     <!--<div class="row3">-->
-         <!--<div>-->
-             <!--<img src="images/user_experice_left.png">-->
-             <!--<img src="images/user_experice_right.png">-->
-         <!--</div>-->
-     <!--</div>-->
+
      <div class="row4_bg">
          <div class="seperateView"  id="row3">
              <div><p>商业模式<span>Bussiness Model</span></p></div>
@@ -205,34 +133,7 @@
          </div>
 
      </div>
-     <!--<div class="insert_img">-->
-         <!--<img src="images/row5_show.png">-->
-     <!--</div>-->
-     <!--<div class="seperateView" id="row6">-->
-         <!--<div><p>友途关键词<span>Key Words</span></p></div>-->
-     <!--</div>-->
-     <!--<div class="row7">-->
-         <!--<div>-->
-         <!--<img src="images/keyword1.png">-->
-         <!--<img src="images/keyword1.png">-->
-         <!--<img src="images/keyword1.png">-->
-         <!--<img src="images/keyword1.png">-->
-         <!--<img src="images/keyword1.png">-->
-         <!--<img src="images/keyword1.png">-->
-         <!--</div>-->
-     <!--</div>-->
-     <!--<div class="seperateView" id="row7">-->
-         <!--<div><p>关于我们<span>About Us</span></p></div>-->
-     <!--</div>-->
-     <!--<div class="row8">-->
-         <!--<div>-->
-             <!--<img src="images/about_us1.png">-->
-             <!--<img src="images/about_us2.png">-->
-         <!--</div>-->
-     <!--</div>-->
-     <!--<div class="fooder">-->
-         <!--<p>©2017 nuomi.com 京ICP证030173号 友途网110108021406号 营业执照信息</p>-->
-     <!--</div>-->
+
      <object class="obj" type="text/html" data="footer/footer.html" ></object>
      <div class="coverLogo">
          <img  src="images/coverLogo.png">
@@ -244,153 +145,63 @@
 </body>
 
 <script>
-    $(".avatarView").mouseenter(function () {
-          submenu()
+     var vm = new Vue({
+         el:'.row5',
+         data:{
+             recommendGuides:[{
+                 avatar:'images/guide1.png',
+                 name:'莎莎莎',
+                 price:'88',
+                 tags:'大胆 聪敏 内敛',
+                 description:'爱好唱歌跳舞'
 
-    })
-    $(".avatarView").mouseleave(function (e) {
-        var direction = moveDirection(this,e);
-        if(direction != 2 )
-        {
-            submenuHover()
-        }
-    })
-    $(".submenu").mouseleave(function (e) {
-        
-        submenuHover()
+             },{
+                 avatar:'images/guide1.png',
+                 name:'莎莎莎',
+                 price:'88',
+                 tags:'大胆 聪敏 内敛',
+                 description:'爱好唱歌跳舞'
 
+             },{
+                 avatar:'images/guide1.png',
+                 name:'莎莎莎',
+                 price:'88',
+                 tags:'大胆 聪敏 内敛',
+                 description:'爱好唱歌跳舞'
 
-    })
-    function submenu() {
-        var left = $(".avatarView").offset().left;
-        $(".avatarView").css({'background-color':'#ffffff'})
-        $(".avatarView").children('span').css('color','#498fca')
-        $(".avatarView").children('div').attr('class','arrowimg-hover')
-        $('.submenu').css({'left':left,'display':'block'});
-    }
-    function submenuHover() {
-        $(".avatarView").css({'background-color':'#f7f7f7'})
-        $(".avatarView").children('span').css('color','#333')
-        $(".avatarView").children('div').attr('class','arrowimg')
-        $('.submenu').css('display','none');
-    }
-    /**
-     * 判断鼠标从哪个方向进入和离开容器
-     * @param {Object} tag JQuery对象，事件绑定的主体
-     * @param {Object} e event对象
-     * @return {Number} direction 值为“0,1,2,3”分别对应着“上，右，下，左”
-     */
-    function moveDirection(tag,e){
-        var w = $(tag).width();
-        var h = $(tag).height();
-        var x = (e.pageX - tag.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);
-        var y = (e.pageY - tag.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
-        var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
-        return direction;
-    }
+             },{
+                 avatar:'images/guide1.png',
+                 name:'莎莎莎',
+                 price:'88',
+                 tags:'大胆 聪敏 内敛',
+                 description:'爱好唱歌跳舞'
 
-     function bindChange (paramenter) {
-        $(paramenter).bind({
-            mouseenter: function(e) {
-                // Hover event handler
-                var id = "#"+$(this).children("a").attr("id")
-                $(id).css("color","#498fca");
-                $(this).css("border-bottom","2px solid #498fca");
-            },
-            mouseleave: function(e) {
-                // Hover event handler
-                var id = "#"+$(this).children("a").attr("id")
-                var pointer = $(this).css("pointer-events")
-                if( pointer == "auto")
-                {
-                    $(id).css("color","#333");
-                }
-                $(this).css("border-bottom","0px");
-            }})
-    }
-     bindChange(".navButton")
-     function scrollTo(paramenter) {
-         $('html, body').animate({
-             scrollTop: $(paramenter).offset().top-$(".navgation").height() +20
-         }, 500);
+             },{
+                 avatar:'images/guide1.png',
+                 name:'莎莎莎',
+                 price:'88',
+                 tags:'大胆 聪敏 内敛',
+                 description:'爱好唱歌跳舞'
 
-     }
+             },{
+                 avatar:'images/guide1.png',
+                 name:'莎莎莎',
+                 price:'88',
+                 tags:'大胆 聪敏 内敛',
+                 description:'爱好唱歌跳舞'
+
+             }]
+         }
+     })
 
 
-    var selectedId = "#a1";
+//   修改导航栏选中
+      var naviframe = document.getElementById('naviframe')
+      naviframe.onload = function () {
 
-    $(".navButton:first").css("background-color","#498fca")
-    $(".navButton:first").css("pointer-events","none")
-    $(selectedId).css("color","#fff")
-    $(document).ready(function(){
-        $(".navButton").click(function(){
-            var id = "#"+$(this).children("a").attr("id")
-            if(id == "#a6")
-            {
-                return;
-            }
-            var parent = $(selectedId).parent()
-            parent.css({"background-color":"#f7f7f7","border-bottom":"0px","pointer-events":"auto"})
-            $(selectedId).css("color","#333")
+          naviframe.contentWindow.navChange('#a1');
+      }
 
-            $(this).css({"pointer-events":"none","background-color":"#498fca"})
-            $(id).css("color","#f7f7f7")
-            selectedId = id
-
-        });
-    });
-    function scrollChange(paramenter) {
-        var parent = $(selectedId).parent()
-//        bindChange(parent)
-        parent.css({"background-color":"#f7f7f7","border-bottom":"0px","pointer-events":"auto"})
-        $(selectedId).css("color","#333")
-
-        var id = paramenter
-        $(id).parent().css({"pointer-events":"none","background-color":"#498fca"})
-        $(id).css("color","#f7f7f7")
-        selectedId = id
-        
-    }
-    $(window).scroll(function(event){
-
-
-//         $(".navgation").css("background-color","f5f5f5")
-        console.log(event)
-        var scrollHeight = $(window).scrollTop()//窗口已经滚动的距离
-        var navHeight = $(".navgation").height()+10
-        var row2Height = $("#row2").offset().top -navHeight//元素相对于窗口的距离
-        var row3Height = $("#row3").offset().top-navHeight
-        var row4Height = $("#row4").offset().top-navHeight
-        var row5Height = $("#row5").offset().top-navHeight
-        var row6Height = $("#row6").offset().top-navHeight
-
-
-        if(scrollHeight <= row2Height)
-        {
-//           滚动到首页区域
-            scrollChange("#a1")
-
-
-        }else if (scrollHeight <= row3Height)
-        {
-
-            scrollChange("#a2")
-        }else if(scrollHeight <= row4Height)
-        {
-            scrollChange("#a3")
-        }else if (scrollHeight <= row5Height)
-
-        {
-
-            scrollChange("#a4")
-        }else if (scrollHeight <= row6Height)
-        {
-            scrollChange("#a5")
-        }else {
-//            scrollChange("#a6")
-        }
-
-    });
 
     //    <!--修改轮播图-->
     var mySwiper = new Swiper('.row1 .swiper-container', {

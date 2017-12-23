@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>导游</title>
+    <title>旅行纪念</title>
     <link href="../css/guides.css" rel="stylesheet">
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
+<iframe id="naviframe" src="../navigation/navigation.html" frameborder="0" scrolling="no" class="nav"></iframe>
   <div class="container">
       <img src="../images/gudies_headerImage.png" class="">
       <div class="content">
@@ -46,8 +47,18 @@
       </div>
 
   </div>
+<iframe src="../footer/footer.html" frameborder="0" scrolling="no" class="footer"></iframe>
+
 </body>
 <script>
+
+    //   修改导航栏选中
+    var naviframe = document.getElementById('naviframe')
+    naviframe.onload = function () {
+
+        naviframe.contentWindow.navChange('#a2');
+    }
+
     var vm = new Vue({
         el:"#guides",
         data:{
@@ -90,5 +101,8 @@
             },]
         }
     })
+
+
+
 </script>
 </html>

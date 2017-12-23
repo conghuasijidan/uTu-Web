@@ -100,17 +100,32 @@ input{
   font-size: 18px;
   color: #fff;
 }
+//.footer{
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: center;
+//  align-items: center;
+//  width: 100%;
+//  height: 160px;
+//}
+//.footer p{
+//  font-size: 14px;
+//  color: #999;
+//  margin: 0px;
+//  margin-bottom: 5px;
+//}
 .footer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 160px;
+  height: 260px;
+  margin-top: -10px;
 }
-.footer p{
-  font-size: 14px;
-  color: #999;
+.nav{
+  border:0px;
   margin: 0px;
-  margin-bottom: 5px;
+  padding: 0px;
+  width:100%;
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }

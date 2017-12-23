@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>导航栏</title>
     <link rel="stylesheet" href="../css/navigation.css">
     <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 <nav class="navgation" >
     <img src="../images/nav_logo.png" class="logo">
-    <div class="navButton first" ><a  href="#row1" id="a1">首页</a></div>
-    <div class="navButton" ><a href="#row2" id="a2">旅行纪念</a></div>
-    <div class="navButton" ><a href="#row3" id="a3">旅行管家</a></div>
-    <div class="navButton" ><a href="#row4" id="a4">关于我们</a></div>
-    <div class="navButton" ><a href="#row5" id="a5">成为途友</a></div>
+    <div class="navButton first" ><a  href="../index.html" target="_blank" id="a1">首页</a></div>
+    <div class="navButton" ><a href="../guides/guides.html" target="_blank" id="a2">旅行纪念</a></div>
+    <div class="navButton" ><a href="../consult/consult.html" target="_blank" id="a3">旅行管家</a></div>
+    <div class="navButton" ><a href="../company/company.html" target="_blank" id="a4">关于我们</a></div>
+    <div class="navButton" ><a href="../guideApplication/guideApplication.html" target="_blank" id="a5">成为途友</a></div>
     <div class="last" >
         <!--<a href="#" id="a6">请登录</a>-->
         <div class="avatarView">
@@ -23,10 +23,10 @@
         </div>
         <div class="submenu">
             <ul>
-                <li>旅行纪念订单</li>
-                <li>旅行管家订单</li>
-                <li>设置</li>
-                <li>退出</li>
+                <li><a href="../order/order.html" target="_blank" >旅行纪念订单</a></li>
+                <li><a href="../order/order.html" target="_blank">旅行管家订单</a></li>
+                <li><a href="../order/order.html" target="_blank">设置</a></li>
+                <li><a href="#" >退出</a></li>
             </ul>
         </div>
     </div>
@@ -36,6 +36,8 @@
 
 </body>
 <script>
+//    var a = 'hello';
+
     $(".avatarView").mouseenter(function () {
         submenu()
 
@@ -64,7 +66,7 @@
 //        alert($('.submenu').css('display'))
     }
     function submenuHover() {
-        $(".avatarView").css({'background-color':'#f7f7f7'})
+        $(".avatarView").css({'background-color':'#fff'})
         $(".avatarView").children('span').css('color','#333')
         $(".avatarView").children('div').attr('class','arrowimg')
         $('.submenu').css('display','none');
@@ -114,79 +116,129 @@
     }
 
 
-    var selectedId = "#a1";
+//    var selectedId = "#a1";
 
-    $(".navButton:first").css("background-color","#498fca")
-    $(".navButton:first").css("pointer-events","none")
-    $(selectedId).css("color","#fff")
-    $(document).ready(function(){
-        $(".navButton").click(function(){
-            var id = "#"+$(this).children("a").attr("id")
-            if(id == "#a6")
-            {
-                return;
-            }
-            var parent = $(selectedId).parent()
-            parent.css({"background-color":"#f7f7f7","border-bottom":"0px","pointer-events":"auto"})
-            $(selectedId).css("color","#333")
+//    $(".navButton:first").css("background-color","#498fca")
+//    $(".navButton:first").css("pointer-events","none")
+//    $(selectedId).css("color","#fff")
 
-            $(this).css({"pointer-events":"none","background-color":"#498fca"})
-            $(id).css("color","#ffffff")
-            selectedId = id
-
-        });
-    });
-    function scrollChange(paramenter) {
+//    navChange(selectedId)
+    function navChange(selectedId) {
         var parent = $(selectedId).parent()
-//        bindChange(parent)
-        parent.css({"background-color":"#fff","border-bottom":"0px","pointer-events":"auto"})
-        $(selectedId).css("color","#333")
-
-        var id = paramenter
-        $(id).parent().css({"pointer-events":"none","background-color":"#498fca"})
-        $(id).css("color","#fff")
-        selectedId = id
+        parent.css({"background-color":"#498fca","border-bottom":"0px","pointer-events":"none"})
+        $(selectedId).css("color","#fff")
 
     }
-    $(window).scroll(function(event){
 
+//    $(document).ready(function(){
+//        $(".navButton").click(function(){
+//            var id = "#"+$(this).children("a").attr("id")
+//
+//            if(id == "#a6")
+//            {
+//                return;
+//            }
+//            var parent = $(selectedId).parent()
+//            parent.css({"background-color":"#fff","border-bottom":"0px","pointer-events":"auto"})
+//            $(selectedId).css("color","#333")
+//
+//            $(this).css({"pointer-events":"none","background-color":"#498fca"})
+//            $(id).css("color","#ffffff")
+//            selectedId = id
+//
+//        });
+//    });
+    //            switch (id)
+    //            {
+    //                case '#a1':{
+    ////                    首页
+    //                    window.open('../index.html')
+    //                    break
+    //                }
+    //                case '#a2':{
+    ////                    旅行纪念
+    //                    window.open('../guides/guides.html');
+    ////                    window.location.href = "../guides/guides.html";
+    //
+    //                    break
+    //                }
+    //                case '#a3':{
+    ////                    旅行管家
+    //                    window.open('../consult/consult.html');
+    //                    break
+    //                }
+    //                case '#a4':{
+    ////                   关于我们
+    //                    window.open('../company/company.html');
+    //                    break
+    //                }
+    //                case '#a5':{
+    ////                     成为途友
+    //                    window.open('../guideApplication/guideApplication.html');
+    //
+    //                    break
+    //                }
+    //                case '#a6':{
+    //                    window.open('../login/login.html');
+    //
+    ////                    登录
+    //
+    //                    break
+    //                }
+    //
+    //            }
 
-//         $(".navgation").css("background-color","f5f5f5")
-        console.log(event)
-        var scrollHeight = $(window).scrollTop()//窗口已经滚动的距离
-        var navHeight = $(".navgation").height()+10
-        var row2Height = $("#row2").offset().top -navHeight//元素相对于窗口的距离
-        var row3Height = $("#row3").offset().top-navHeight
-        var row4Height = $("#row4").offset().top-navHeight
-        var row5Height = $("#row5").offset().top-navHeight
-        var row6Height = $("#row6").offset().top-navHeight
-
-
-        if(scrollHeight <= row2Height)
-        {
-//           滚动到首页区域
-            scrollChange("#a1")
-
-
-        }else if (scrollHeight <= row3Height)
-        {
-
-            scrollChange("#a2")
-        }else if(scrollHeight <= row4Height)
-        {
-            scrollChange("#a3")
-        }else if (scrollHeight <= row5Height)
-
-        {
-
-            scrollChange("#a4")
-        }else if (scrollHeight <= row6Height)
-        {
-            scrollChange("#a5")
-        }else {
-//            scrollChange("#a6")
-        }
-
-    });
+//    function scrollChange(paramenter) {
+//        var parent = $(selectedId).parent()
+////        bindChange(parent)
+//        parent.css({"background-color":"#fff","border-bottom":"0px","pointer-events":"auto"})
+//        $(selectedId).css("color","#333")
+//
+//        var id = paramenter
+//        $(id).parent().css({"pointer-events":"none","background-color":"#498fca"})
+//        $(id).css("color","#fff")
+//        selectedId = id
+//
+//    }
+//    $(window).scroll(function(event){
+//
+//
+////         $(".navgation").css("background-color","f5f5f5")
+//        console.log(event)
+//        var scrollHeight = $(window).scrollTop()//窗口已经滚动的距离
+//        var navHeight = $(".navgation").height()+10
+//        var row2Height = $("#row2").offset().top -navHeight//元素相对于窗口的距离
+//        var row3Height = $("#row3").offset().top-navHeight
+//        var row4Height = $("#row4").offset().top-navHeight
+//        var row5Height = $("#row5").offset().top-navHeight
+//        var row6Height = $("#row6").offset().top-navHeight
+//
+//
+//        if(scrollHeight <= row2Height)
+//        {
+////           滚动到首页区域
+//            scrollChange("#a1")
+//
+//
+//        }else if (scrollHeight <= row3Height)
+//        {
+//
+//            scrollChange("#a2")
+//        }else if(scrollHeight <= row4Height)
+//        {
+//            scrollChange("#a3")
+//        }else if (scrollHeight <= row5Height)
+//
+//        {
+//
+//            scrollChange("#a4")
+//        }else if (scrollHeight <= row6Height)
+//        {
+//            scrollChange("#a5")
+//        }else {
+////            scrollChange("#a6")
+//        }
+//
+//    });
 </script>
 </html>
