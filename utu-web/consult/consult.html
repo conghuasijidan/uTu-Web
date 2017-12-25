@@ -10,12 +10,14 @@
 
 </head>
 <body>
+<iframe id="naviframe" src="../navigation/navigation.html" frameborder="0" scrolling="no" class="nav"></iframe>
+
   <div class="container">
      <div class="content">
-       <div class="tool">
-           <span>旅行管家</span>
-           <img src="../images/close.png">
-       </div>
+       <!--<div class="tool">-->
+           <!--<span>旅行管家</span>-->
+           <!--<img src="../images/close.png">-->
+       <!--</div>-->
        <div class="contentInfo">
            <div class="left">
                <img src="../images/consult_img.png">
@@ -194,6 +196,8 @@
        </div>
      </div>
   </div>
+<iframe src="../footer/footer.html" frameborder="0" scrolling="no" class="footer"></iframe>
+
 </body>
 <script>
     var totalCount = 0;
@@ -212,6 +216,12 @@
 // 初始化日历控件
     function createTime(){
         WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'2017-12-01',maxDate:'2022-01-01'});
+    }
+    //   初始化导航栏选中
+    var naviframe = document.getElementById('naviframe')
+    naviframe.onload = function () {
+
+        naviframe.contentWindow.navChange('#a3');
     }
 
 
