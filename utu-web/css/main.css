@@ -379,32 +379,25 @@ p {
   /*background-color: beige;*/ }
 
 .cell {
+  width: 31%;
   height: auto;
-  float: left;
-  margin-right: 12px; }
+  float: left; }
   @media screen and (min-width: 1600px) {
     .cell {
       margin-top: 44px;
-      width: 32%; } }
+      margin-right: 33px; } }
   @media (min-width: 1300px) and (max-width: 1600px) {
     .cell {
       margin-top: 36px;
-      width: 32%; } }
+      margin-right: 20px; } }
   @media (min-width: 1000px) and (max-width: 1300px) {
     .cell {
       margin-top: 28px;
-      width: 32%; } }
+      margin-right: 10px; } }
   @media screen and (max-width: 1000px) {
     .cell {
       margin-top: 20px;
       width: 238px; } }
-
-@media screen and (min-width: 1000px) {
-  .cell_margin {
-    margin-right: 2%; } }
-@media screen and (max-width: 1000px) {
-  .cell_margin {
-    margin-right: 13px; } }
 
 .cell img {
   margin: 0px; }

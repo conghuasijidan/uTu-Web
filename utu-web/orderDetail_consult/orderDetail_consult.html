@@ -9,7 +9,7 @@
 </head>
 <body>
 <iframe id="naviframe" src="../navigation/navigation.html" frameborder="0" scrolling="no" class="nav"></iframe>
-<iframe src="../orderTool/orderTool.html" frameborder="0" scrolling="no" class="orderTool"></iframe>
+<iframe src="../orderTool/orderTool.html" id="tooliframe" frameborder="0" scrolling="no" class="orderTool"></iframe>
     <div class="container">
         <div class="left">
             <div class="progress">
@@ -21,54 +21,60 @@
                 <div class="line"></div>
                 <div class="circle">4</div>
             </div>
+            <div class="progressDesc">
+                <span class="progressTitle">提交需求</span>
+                <span class="progressTitle">定制行程</span>
+                <span class="progressTitle">付款购买</span>
+                <span class="progressTitle">享受服务</span>
+            </div>
             <div class="order">
                 <div class="orderStatus">
                     <span><b>订单详情</b></span>
-                    <span>未付款</span>
+                    <span>{{orderInfo.status}}</span>
                 </div>
                 <div class="consult_item"><span ><b class="title">基本信息</b></span></div>
                 <div class="consult_item">
-                    <span>地点</span>
-                    <span>塔雷峰塔</span>
+                    <span>地点信息</span>
+                    <span>{{orderInfo.fromLocation}}-{{orderInfo.toLocation}}</span>
                 </div>
                 <div class="consult_item">
-                    <span>时间</span>
-                    <span>2017-12-12 14：00-18：00</span>
+                    <span>出游日期</span>
+                    <span>{{orderInfo.leaveTime}}</span>
                 </div>
                 <div class="consult_item">
-                    <span>套餐</span>
-                    <span>套餐A(至少30张原图+10张精修)</span>
+                    <span>出游天数</span>
+                    <span>{{orderInfo.days}}天</span>
                 </div>
                 <div class="consult_item">
-                    <span>合计</span>
-                    <span>198.0元</span>
+                    <span>出游人数</span>
+                    <span>{{orderInfo.memberCount}}人</span>
                 </div>
             </div>
             <div class="order">
                 <div class="consult_item"><span ><b class="title">其他信息</b></span></div>
                 <div class="consult_item">
                     <span>酒店档次</span>
-                    <span>三星级</span>
+                    <span>{{orderInfo.hotelLevel}}</span>
                 </div>
                 <div class="consult_item">
                     <span>美食口味</span>
-                    <span>清单</span>
+                    <span>{{orderInfo.food}}</span>
                 </div>
                 <div class="consult_item">
                     <span>交通方式</span>
-                    <span>高铁</span>
+                    <span>{{orderInfo.travel}}</span>
                 </div>
                 <div class="consult_item">
-                    <span>预算</span>
-                    <span>5千-1万</span>
+                    <span>旅行预算</span>
+                    <span>{{orderInfo.budget}}</span>
                 </div>
                 <div class="consult_item">
                     <span>商业保险</span>
-                    <span>需要</span>
+                    <span>{{orderInfo.insurance}}</span>
                 </div>
                 <div class="consult_item">
                     <span>旅行偏好</span>
-                    <span>亲子 度假</span>
+                    <span>{{orderInfo.travelTags}}</span>
                 </div>
             </div>
             <div class="button">
@@ -86,4 +92,33 @@
     </div>
 <iframe src="../footer/footer.html" frameborder="0" scrolling="no" class="footer"></iframe>
 </body>
+<script>
+    var vm = new Vue({
+        el:'.container',
+        data:{
+            orderInfo:{
+                fromLocation:'杭州',
+                toLocation:'三亚',
+                leaveTime:'2017-12-12 08:00',
+                days:'2',
+                memberCount:'2',
+                hotelLevel:'三星级',
+                food:'清淡',
+                travel:'高铁',
+                budget:'5千-1万',
+                insurance:'需要',
+                travelTags:'亲子 度假',
+                status:'未付款'
+            }
+        }
+    })
+
+    //   修改tool栏选中
+    var tooliframe = document.getElementById('tooliframe')
+    tooliframe.onload = function () {
+
+        tooliframe.contentWindow.toolChange('#li2');
+    }
+
+</script>
 </html>

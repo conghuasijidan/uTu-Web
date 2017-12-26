@@ -13,9 +13,9 @@
     <div class="container">
         <div class="tool">
            <ul >
-               <li id="li1" class="">旅行纪念订单</li>
-               <li id="li2">旅行管家订单</li>
-               <li id="li3">设置</li>
+               <li id="li1" onclick="toolClick('#li1')">旅行纪念订单</li>
+               <li id="li2" onclick="toolClick('#li2')">旅行管家订单</li>
+               <li id="li3" onclick="toolClick('#li3')">设置</li>
            </ul>
         </div>
         <div class="order">
@@ -27,40 +27,46 @@
                </ul>
             </div>
             <div class="cellList">
-                <div class="cell" id="normalOrder">
+                <div class="cell" id="normalOrder" v-for="item in normalOrderList">
                     <div class="orderStatus">
-                        <span>待支付：198.0元</span>
-                        <span>未付款</span>
+                        <span>待支付：{{item.price}}元</span>
+                        <span>{{item.status}}</span>
                     </div>
                     <div class="content">
                         <img src="../images/cellAvatar.png">
                         <div class="info">
-                            <span> 途友 球球</span>
-                            <span > 2017-12-12</span>
-                            <span >雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔雷锋塔</span>
+                            <span> 途友 {{item.name}}</span>
+                            <span > {{item.time}}</span>
+                            <span >{{item.location}}</span>
                         </div>
                     </div>
                 </div>
-                <div class="cell" id="managerOrder">
+                <div class="cell" id="managerOrder" v-for="item in managerOrderList">
                     <div class="orderStatus">
-                        <span>待支付：198.0元</span>
-                        <span>未付款</span>
+                        <span>待支付：{{item.price}}元</span>
+                        <span>{{item.status}}</span>
                     </div>
                     <div class="location">
-                        <span>杭州-三亚</span>
+                        <span>{{item.fromLocation}}-{{item.toLocation}}</span>
                     </div>
                     <div class="time">
-                        <span>2017-12-01 出游/5天定制游</span>
+                        <span>{{item.leaveTime}} 出游/5天定制游</span>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="page">
+            <div class="pageNum" >1</div>
+            <div class="nextPage">下一页</div>
+            <div class="prePage">上一页</div>
+        </div>
         <div class="setting">
             <div class="settingTool">
-                <ul>
-                    <li id="setting1" >修改密码</li>
-                    <li id="setting2">绑定微信</li>
-                </ul>
+                <!--<ul>-->
+                    <!--<li id="setting1" >修改密码</li>-->
+                    <!--<li id="setting2">绑定微信</li>-->
+                <!--</ul>-->
+                修改密码
             </div>
             <div class="pwd" id="pwd">
                  <span class="dic">密码长度6-16位，由英文字母（区分大小写）、数字0-9、特殊字符，至少两种组合而成</span>
@@ -88,17 +94,82 @@
 </body>
 <script>
 
+    var statusSelected = '#status1';
+    var toolSelected = '#li1';
+    var settingSelected = '#setting1';
+
+   var vm = new Vue({
+       el:'.container',
+       data:{
+//           toolSelected:'#li',
+           normalOrderList:[{
+             name:'球球',
+             time:'2017-12-12 08:00',
+             location:'雷锋塔下',
+             price:'198.0',
+             status:'未付款'
+
+           }],
+           managerOrderList:[{
+               leaveTime:'2017-12-12 08:00',
+               fromLocation:'杭州',
+               toLocation:'三亚',
+               price:'198.0',
+               status:'未付款'
+           }]
+       },
+       computer:function () {
+
+
+       }
+   })
+
+//    导航到订单详情
+    $('#normalOrder').on('click',function () {
+        window.open('../orderDetail/orderDetail.html')
+    })
+    $('#managerOrder').on('click',function () {
+        window.open('../orderDetail_consult/orderDetail_consult.html')
+    })
+
+
 
    // tool
-  var toolSelected = '#li1';
-  $('.tool li').on('click',function(){
-      alert('click');
-      $(toolSelected).css('color','#ffffff');
-      $(this).css('color','#498fca');
-      var id = $(this).attr('id');
-      toolSelected = '#'+id;
-      changeOrder(id)
-  })
+    var afterUrl =  window.location.search.substring(1);
+//   alert(afterUrl);
+   if (afterUrl !=''){
+       var afterEqual = afterUrl.substring(afterUrl.indexOf('=')+1)
+       if (afterEqual!='')
+       {
+           var toolId = '#'+afterEqual
+           toolClick(toolId)
+//           changeOrder(afterEqual)
+
+       }
+   }else {
+
+       toolClick(toolSelected)
+   }
+
+
+//  $('.tool li').on('click',function(){
+//      alert('click');
+//
+//      $(toolSelected).css('color','#ffffff');
+//      $(this).css('color','#498fca');
+//      var id = $(this).attr('id');
+//      toolSelected = '#'+id;
+//      changeOrder(id)
+//  })
+    function toolClick(toolId) {
+
+        $(toolSelected).css('color','#ffffff');
+        $(toolId).css('color','#498fca');
+        var id = $(toolId).attr('id');
+        toolSelected = '#'+id;
+        changeOrder(id)
+    }
+
    function changeOrder(toolid) {
       switch (toolid){
           case 'li1':
@@ -112,6 +183,8 @@
           }
           case 'li2':
           {
+//              alert(afterEqual)
+              $('#status1').click()
               $(".order").css('display','flex');
               $(".setting").css('display','none');
 
@@ -132,8 +205,9 @@
 
 
 //   status ---- 传递不同的数据源
-   var statusSelected = '#status1';
+
    $('.status li').on('click',function(){
+//       alert('hello')
        $(statusSelected).css('color','#999999');
        $(this).css('color','#333333');
        var id = $(this).attr('id');
@@ -142,7 +216,7 @@
    })
 
 // setting
-   var settingSelected = '#setting1';
+
    $('.settingTool li').on('click',function(){
        $(settingSelected).css('color','#999999');
        $(this).css('color','#333333');
@@ -151,23 +225,33 @@
        changeStatus_Setting(id)
    })
 
+    
     function changeStatus_Setting(selectedId) {
         switch (selectedId){
             case 'status1':
             {
-                alert(selectedId)
+//                alert(selectedId)
+//                分两种情况 纪念订单 和 管家订单
+//                alert(toolSelected)
+
+
                 break;
             }
             case 'status2':
             {
-                alert(selectedId)
+//                alert(selectedId)
+//                alert(toolSelected)
+
+
+
                 break;
             }
             case 'status3':
             {
-                alert(selectedId)
+//                alert(selectedId)
                 break;
             }
+//           下面两种情况暂时不用了
             case 'setting1':
             {
                 $("#pwd").css('display','flex')
@@ -183,6 +267,10 @@
 
         }
     }
+
+//    根据订单数量时候展示页码，进行导航 一页显示4个订单 后台进行分页设置
+
+
 
 
 </script>

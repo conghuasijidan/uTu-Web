@@ -22,7 +22,27 @@ body{
   align-items: center;
   margin-top: 80px;
   // 原先40
+  //background-color: orange;
 }
+.progressDesc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.progressTitle{
+  font-size: 16px;
+  color: #cccccc;
+  margin-right: 85px;
+}
+.progressTitle:last-of-type{
+  margin-right: 0px;
+}
+.circleBg{
+  display: flex;
+  flex-direction: column;
+}
+
 .circle{
   width: 50px;
   height: 50px;
@@ -34,6 +54,7 @@ body{
   font-size: 20px;
   color: #ffffff;
 }
+
 .line{
   width: 100px;
   height: 8px;
@@ -151,7 +172,18 @@ body{
 .star{
   width: 100px;
   height: 15px;
-  margin-right: 20px;
+
+}
+.starView{
+  display: flex;
+  //margin-left: 10px;
+  margin-right: 16px;
+}
+.starView img{
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+
 }
 .orderCount{
   margin-left: 20px;

@@ -9,57 +9,40 @@
 <body>
 <div class="tool">
     <ul>
-        <li id="li1" class="">旅行纪念订单</li>
-        <li id="li2">旅行管家订单</li>
-        <li id="li3">设置</li>
+        <li id="li1" onclick="toolClick('li1')">旅行纪念订单</li>
+        <li id="li2" onclick="toolClick('li2')">旅行管家订单</li>
+        <li id="li3" onclick="toolClick('li3')">设置</li>
     </ul>
 </div>
 
 </body>
 <script>
 //       与订单页面的功能不一样
-    var toolSelected = '#li1';
-    $('.tool li').on('click',function(){
-        alert('click');
-        $(toolSelected).css('color','#ffffff');
-        $(this).css('color','#498fca');
-        var id = $(this).attr('id');
-        toolSelected = '#'+id;
-        changeOrder(id)
-    })
-    function changeOrder(toolid) {
+
+    function toolChange(toolId) {
+
+        $(toolId).css('color','#498fca');
+    }
+
+    function toolClick(toolid) {
         switch (toolid){
             case 'li1':
             {
-                $(".order").css('display','flex');
-                $(".setting").css('display','none');
-
-                $("#normalOrder").css('display','block');
-                $("#managerOrder").css('display','none');
-
 //                返回旅行纪念订单页面 并 选中 旅行纪念
+                window.open('../order/order.html?toolSelected='+'li1')
 
                 break;
             }
             case 'li2':
             {
-                $(".order").css('display','flex');
-                $(".setting").css('display','none');
-
-                $("#normalOrder").css('display','none');
-                $("#managerOrder").css('display','block');
-
                 //                返回旅行纪念订单页面 并选中 管家订单
-
+                window.open('../order/order.html?toolSelected='+'li2')
                 break;
             }
             case 'li3':
             {
-                $(".order").css('display','none');
-                $(".setting").css('display','flex')
-
                 //                返回旅行纪念订单页面 并选中设置
-
+                window.open('../order/order.html?toolSelected='+'li3')
                 break;
             }
         }

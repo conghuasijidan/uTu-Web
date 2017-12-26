@@ -9,7 +9,7 @@
 </head>
 <body>
 <iframe id="naviframe" src="../navigation/navigation.html" frameborder="0" scrolling="no" class="nav"></iframe>
-<iframe src="../orderTool/orderTool.html" frameborder="0" scrolling="no" class="orderTool"></iframe>
+<iframe src="../orderTool/orderTool.html" id="tooliframe" frameborder="0" scrolling="no" class="orderTool"></iframe>
      <div class="container">
          <div class="left">
            <div class="progress">
@@ -21,26 +21,32 @@
                <div class="line"></div>
                <div class="circle">4</div>
            </div>
+            <div class="progressDesc">
+                <span class="progressTitle">预约下单</span>
+                <span class="progressTitle">途友接单</span>
+                <span class="progressTitle">享受服务</span>
+                <span class="progressTitle">结束订单</span>
+            </div>
            <div class="order">
                <div class="orderStatus">
                    <span><b>订单详情</b></span>
-                   <span>未付款</span>
+                   <span>{{orderInfo.status}}</span>
                </div>
                <div class="item">
                    <span>地点</span>
-                   <span>雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔雷峰塔</span>
+                   <span>{{orderInfo.location}}</span>
                </div>
                <div class="item">
                    <span>时间</span>
-                   <span>2017-12-12 14：00-18：00</span>
+                   <span>{{orderInfo.time}}</span>
                </div>
                <div class="item">
                    <span>套餐</span>
-                   <span>套餐A(至少30张原图+10张精修)</span>
+                   <span>{{orderInfo.plan}}</span>
                </div>
                <div class="item">
                    <span>合计</span>
-                   <span>198.0元</span>
+                   <span>{{orderInfo.totalMoney}}元</span>
                </div>
            </div>
            <div class="button">
@@ -49,20 +55,24 @@
          </div>
          <div class="right">
              <div class="cell">
-                 <img src="../images/orderDetail_photo.png" class="avatar">
+                 <img :src="guideInfo.avatar" class="avatar">
                  <div class="list1">
                      <div class="nameView">
-                       <span>球球</span>
-                       <img src="../images/female.png" class="gender">
+                       <span>{{guideInfo.name}}</span>
+                       <img src="../images/female.png" class="gender" v-if="guideInfo.gender==0">
+                       <img src="../images/male.png" class="gender" v-else="">
                      </div>
-                     <img src="../images/star.png" class="star">
+                     <div class="starView">
+                         <img src="../images/comment_star_selected.png" v-for=" in guideInfo.level">
+                         <img src="../images/comment_star_normal.png" v-for=" in 5-guideInfo.level">
+                     </div>
                  </div>
                  <div class="list2">
                      <div class="orderCount">
                          <img src="../images/order_icon.png" class="gender">
-                         <span>接单10次</span>
+                         <span>接单{{guideInfo.serviceCount}}次</span>
                      </div>
-                     <span class="price">￥198元</span>
+                     <span class="price">￥{{guideInfo.price}}元</span>
                  </div>
                  <span class="service">增值服务</span>
                  <div class="serviceView">
@@ -91,6 +101,34 @@
      <iframe src="../footer/footer.html" frameborder="0" scrolling="no" class="footer"></iframe>
 </body>
 <script>
+    var vm = new Vue({
+        el:'.container',
+        data:{
+           orderInfo:{
+               status:'未付款',
+               location:'雷峰塔',
+               time:'2017-12-12 08:00',
+               plan:'套餐A(至少30张原图+10张精修)',
+               totalMoney:'198.0'
+           },
+            guideInfo:{
+               name:'球球',
+               gender:'0',
+               level:3,
+               price:'198',
+               avatar:'../images/orderDetail_photo.png',
+               serviceCount:'10' ,
+
+            }
+        }
+    })
+
+    //   修改tool栏选中
+    var tooliframe = document.getElementById('tooliframe')
+    tooliframe.onload = function () {
+
+        tooliframe.contentWindow.toolChange('#li1');
+    }
 
     $(".modifyButton").on('click',function () {
         alert('取消订单')

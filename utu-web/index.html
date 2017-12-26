@@ -70,7 +70,7 @@
      </div>
      <div class="row5">
          <div class="cellBg">
-             <div class="cell " v-for="item in recommendGuides">
+             <div class="cell " v-for="(item,index) in recommendGuides" >
                  <img :src="item.avatar">
                  <div class="list1"><span>{{item.name}}</span><span>{{item.price}}元/小时（4小时起订）</span></div>
                  <div class="list2">友途网认证导游</div>
@@ -144,54 +144,78 @@
 </body>
 
 <script>
+    var guidesList = [{
+        avatar:'images/guide1.png',
+        name:'莎莎莎',
+        price:'88',
+        tags:'大胆 聪敏 内敛',
+        description:'爱好唱歌跳舞'
+
+    },{
+        avatar:'images/guide1.png',
+        name:'莎莎莎',
+        price:'88',
+        tags:'大胆 聪敏 内敛',
+        description:'爱好唱歌跳舞'
+
+    },{
+        avatar:'images/guide1.png',
+        name:'莎莎莎',
+        price:'88',
+        tags:'大胆 聪敏 内敛',
+        description:'爱好唱歌跳舞'
+
+    },{
+        avatar:'images/guide1.png',
+        name:'莎莎莎',
+        price:'88',
+        tags:'大胆 聪敏 内敛',
+        description:'爱好唱歌跳舞'
+
+    },{
+        avatar:'images/guide1.png',
+        name:'莎莎莎',
+        price:'88',
+        tags:'大胆 聪敏 内敛',
+        description:'爱好唱歌跳舞'
+
+    },{
+        avatar:'images/guide1.png',
+        name:'莎莎莎',
+        price:'88',
+        tags:'大胆 聪敏 内敛',
+        description:'爱好唱歌跳舞'
+
+    }]
+
      var vm = new Vue({
          el:'.row5',
          data:{
-             recommendGuides:[{
-                 avatar:'images/guide1.png',
-                 name:'莎莎莎',
-                 price:'88',
-                 tags:'大胆 聪敏 内敛',
-                 description:'爱好唱歌跳舞'
-
-             },{
-                 avatar:'images/guide1.png',
-                 name:'莎莎莎',
-                 price:'88',
-                 tags:'大胆 聪敏 内敛',
-                 description:'爱好唱歌跳舞'
-
-             },{
-                 avatar:'images/guide1.png',
-                 name:'莎莎莎',
-                 price:'88',
-                 tags:'大胆 聪敏 内敛',
-                 description:'爱好唱歌跳舞'
-
-             },{
-                 avatar:'images/guide1.png',
-                 name:'莎莎莎',
-                 price:'88',
-                 tags:'大胆 聪敏 内敛',
-                 description:'爱好唱歌跳舞'
-
-             },{
-                 avatar:'images/guide1.png',
-                 name:'莎莎莎',
-                 price:'88',
-                 tags:'大胆 聪敏 内敛',
-                 description:'爱好唱歌跳舞'
-
-             },{
-                 avatar:'images/guide1.png',
-                 name:'莎莎莎',
-                 price:'88',
-                 tags:'大胆 聪敏 内敛',
-                 description:'爱好唱歌跳舞'
-
-             }]
+             recommendGuides:guidesList
          }
      })
+
+//ajax  https://piaogood.com/1.0/promotion
+
+//    $.ajax({
+//        type: 'GET',
+//        url: 'https://piaogood.com/1.0/promotion',
+//        dataType:"jsonp",
+//        jsonp:"jsoncallback",
+//        jsonpCallback:"success_jsonpCallback",
+//        timeout:3000,
+//        dataFilter:function(json){
+//            console.log("jsonp.filter:"+json);
+//            return json;
+//        },
+//        success:function(json,textStatus){
+//            console.log("jsonp.success:"+json.name);
+//        },
+//        error:function(XMLHttpRequest,textStatus,errorThrown){
+//            console.log("jsonp.error:"+textStatus);
+//        }
+//    })
+
 
 
 //   修改导航栏选中
@@ -238,7 +262,7 @@
          mySwiper1.slideNext()
      })
 
-// 视频播放
+//     视频播放
      $("#video_bg").hide();
      //    隐藏maskView
      $(document).ready(function () {
@@ -253,11 +277,12 @@
              });
          })
      })
-     //    视频播放结束
+ //      视频播放结束
      function videoEnd() {
          $("#video_bg").hide();
          $(".maskView").show();
      }
+
 
 </script>
 </html>

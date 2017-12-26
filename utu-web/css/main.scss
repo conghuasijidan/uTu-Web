@@ -587,13 +587,16 @@ p{
 }
 .cellBg{
   //align-items: center;
+  //background-color: orange;
+  //position: relative;
 }
 .cell{
-
+  width: 31%;
   height: auto;
   //background-color: #5cb85c;
   float: left;
-  margin-right: 12px;
+
+  //min-width: 1200px;
 
   @media screen and (min-width: 1000px){
 
@@ -602,31 +605,27 @@ p{
   @media screen and (min-width: 1600px){
     margin-top: 44px;
     //width: 460px;
-    width: 32%;
+    //width: 32%;
+    margin-right: 33px;
 
   }
   @media (min-width: 1300px) and (max-width: 1600px){
     margin-top: 36px;
-    width: 32%;
+    margin-right: 20px;
   }
   @media (min-width: 1000px) and (max-width: 1300px){
     margin-top: 28px;
-    width: 32%;
+    //width: 32%;
+    margin-right: 10px;
   }
   @media screen and (max-width: 1000px){
     margin-top: 20px;
     width: 238px;
   }
 }
-.cell_margin{
+.cell_bg{
+  //margin-right: ;
 
-  @media screen and (min-width: 1000px){
-    //margin-right: 35px;
-    margin-right: 2%;
-  }
-  @media screen and (max-width: 1000px){
-    margin-right: 13px;
-  }
 }
 .cell img{
 
@@ -649,6 +648,7 @@ p{
   }
 
 }
+
 .list1{
 
   width: 100%;

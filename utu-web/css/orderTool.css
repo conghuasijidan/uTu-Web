@@ -15,9 +15,6 @@ ul {
   padding: 0;
   list-style: none; }
 
-.tool li:first-of-type {
-  color: #498fca; }
-
 .tool li {
   font-size: 14px;
   color: #ffffff;

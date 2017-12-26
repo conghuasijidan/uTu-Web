@@ -18,7 +18,7 @@
            <input type="number" placeholder="手机号" id="phone">
            <div class="error"></div>
            <div class="code">
-                <input type="text" placeholder="验证码" >
+                <input type="text" placeholder="验证码" id="inputCode">
                 <div id="codelabel">获取验证码</div>
            </div>
            <div class="button">登录</div>
@@ -80,9 +80,12 @@
 
     $(".button").on('click',function () {
         var phone = $('#phone').val();
-        var code = $('#codelabel').val();
+        var code = $('#inputCode').val();
+//        alert(code)
+
         if(phone=="" || code =="")
         {
+//            alert('hello')
             $(".error").html("手机号或验证码不能为空")
         }else
         {

@@ -36,7 +36,21 @@ body{
     margin-left: 200px;
   }
 }
-.avatarView{
+//.loginView{
+//  width: 100%;
+//  height: 100%;
+//  background-color: #fff;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//
+//}
+.loginView a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #333333;
+}
+.avatarView,.loginView{
   width: 100%;
   height: 100%;
   background-color: #fff;
