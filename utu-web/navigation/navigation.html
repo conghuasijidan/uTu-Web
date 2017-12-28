@@ -25,10 +25,10 @@
         </div>
         <div class="submenu">
             <ul>
-                <li><a href="../order/order.html" target="_blank" >旅行纪念订单</a></li>
-                <li><a href="../order/order.html" target="_blank">旅行管家订单</a></li>
-                <li><a href="../order/order.html" target="_blank">设置</a></li>
-                <li><a href="#" >退出</a></li>
+                <li><a href="../order/order.html?toolSelected=li1" target="_blank" >旅行纪念订单</a></li>
+                <li><a href="../order/order.html?toolSelected=li2" target="_blank">旅行管家订单</a></li>
+                <li><a href="../order/order.html?toolSelected=li3" target="_blank">设置</a></li>
+                <li><a href="#" id="out">退出</a></li>
             </ul>
         </div>
     </div>
@@ -39,6 +39,14 @@
 </body>
 <script>
 //    var a = 'hello';
+//   退出登录
+    $("#out").on('click',function () {
+        alert('退出')
+    })
+//   点击菜单 菜单消失
+    $(".submenu ").on('click',function () {
+        submenuHover()
+    })
 
     $(".avatarView").mouseenter(function () {
         submenu()

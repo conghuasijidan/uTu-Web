@@ -11,6 +11,22 @@ body{
   align-items: center;
   min-width: 1200px;
 }
+.content_bg{
+  display: flex;
+
+}
+.preImage,.nextImage{
+  width: 36px;
+  height: 61px;
+  margin-top: 560px;
+
+}
+.preImage{
+  margin-right: 40px;
+}
+.nextImage{
+  //margin-left: 40px;
+}
 .content {
   width: 1200px;
   display: flex;
@@ -53,9 +69,10 @@ body{
 .guides{
   width: 100%;
   margin-top: 60px;
+  //background-color: orange;
 }
 .guideCell{
-   float: left;
+  float: left;
   margin-right: 20px;
 }
 .guideInfo{

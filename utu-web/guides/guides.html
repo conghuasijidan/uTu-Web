@@ -11,41 +11,44 @@
 <iframe id="naviframe" src="../navigation/navigation.html" frameborder="0" scrolling="no" class="nav"></iframe>
   <div class="container">
       <img src="../images/gudies_headerImage.png" class="">
-      <div class="content">
-         <div class="blockView">
-             <div class="titleView">
-                 <div class="separateLine"></div>
-                 <span>途友推荐</span>
-                 <div class="separateLine"></div>
-             </div>
-             <span class="subTitle">约个途友去拍照</span>
-             <div class="guides" id="guides">
-                 <div class="guideCell" v-for="item in guideList">
-                     <img v-bind:src="item.image">
-                     <div class="guideInfo">
-                         <img :src="item.avatar" class="avatar">
-                         <div class="desc">
-                             <div class="name">
-                                 <span>{{item.name}}</span>
-                                 <div class="starView">
-                                     <img src="../images/comment_star_selected.png" v-for=" in item.level">
-                                     <img src="../images/comment_star_normal.png" v-for=" in 5-item.level">
+      <div class="content_bg">
+          <img src="../images/left_arrow.png" id="pre" class="preImage">
+          <div class="content">
+             <div class="blockView">
+                 <div class="titleView">
+                     <div class="separateLine"></div>
+                     <span>途友选择</span>
+                     <div class="separateLine"></div>
+                 </div>
+                 <span class="subTitle">约个途友去拍照</span>
+                 <div class="guides" id="guides">
+                     <div class="guideCell" v-for="item in guideList">
+                         <img v-bind:src="item.image">
+                         <div class="guideInfo">
+                             <img :src="item.avatar" class="avatar">
+                             <div class="desc">
+                                 <div class="name">
+                                     <span>{{item.name}}</span>
+                                     <div class="starView">
+                                         <img src="../images/comment_star_selected.png" v-for=" in item.level">
+                                         <img src="../images/comment_star_normal.png" v-for=" in 5-item.level">
+                                     </div>
                                  </div>
-                             </div>
-                             <div class="tags" >
-                                <div class="tag" v-for="tag in item.tags">{{tag}}</div>
+                                 <div class="tags" >
+                                    <div class="tag" v-for="tag in item.tags">{{tag}}</div>
+                                 </div>
                              </div>
                          </div>
                      </div>
+
                  </div>
-
              </div>
-         </div>
-          <div class="aboutProduct">
-              <img src="../images/guides_product.png">
+              <div class="aboutProduct">
+                  <img src="../images/guides_product.png">
+              </div>
           </div>
+          <img src="../images/right_arrow.png" id="next" class="nextImage">
       </div>
-
   </div>
 <iframe src="../footer/footer.html" frameborder="0" scrolling="no" class="footer"></iframe>
 
