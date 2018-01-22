@@ -6,9 +6,13 @@
     <link href="../css/guideDetail.css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
     <script src="https://unpkg.com/vue"></script>
+
 </head>
 <body>
+
+<iframe id="naviframe" src="../navigation/navigation.html" frameborder="0" scrolling="no" class="navigation"></iframe>
 <div class="container">
+
     <div class="content" id="content">
         <div class="guideInfo">
            <img src="../images/orderDetail_photo.png" class="guideAvatar">
@@ -163,6 +167,7 @@
         </div>
     </div>
 </div>
+<iframe src="../footer/footer.html" frameborder="0" scrolling="no" class="footer"></iframe>
 </body>
 <script>
 
@@ -241,6 +246,17 @@
         selectedID = paramenter;
         $('#navTool').attr('class','navToolFixed')
     }
+
+    $('.consult').on('click',function () {
+
+        window.open('http://wpa.qq.com/msgrd?V=1&uin=1234567&exe=qq&Site=qq&menu=yes')
+
+    })
+
+
+
+
+
 
 </script>
 </html>

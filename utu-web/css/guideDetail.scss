@@ -8,6 +8,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
+
 }
 .content{
   width: 1060px;
@@ -367,3 +369,19 @@ body{
   margin-bottom: 20px;
   float: left;
 }
+.footer{
+  width: 100%;
+  height: 260px;
+
+}
+.navigation{
+  border:0px;
+  padding: 0px;
+  width:100%;
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+}
+

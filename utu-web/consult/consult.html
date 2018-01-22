@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>旅行管家</title>
     <link href="../css/consult.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/sweetalert.css">
     <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
     <script src="https://unpkg.com/vue"></script>
     <script src="../js/My97DatePicker/WdatePicker.js"></script>
+    <script src="../js/sweetalert.js"></script>
 
 </head>
 <body>
@@ -318,10 +320,22 @@
 
     $('.submit').on('click',function () {
 
-        for( var i =0;i<moreArr.length ;i++)
-        {
-            console.log(moreArr[i])
-        }
+//        for( var i =0;i<moreArr.length ;i++)
+//        {
+//            console.log(moreArr[i])
+//        }
+//        sa-icon sa-custom
+        swal({
+            title: "请在小程序中下单",
+            text: '弹窗在3秒后自动关闭',
+            imageUrl: "../images/guide1.png",
+            html: true,
+            timer:100000 ,
+            showConfirmButton: false
+        });
+
+
+
 
     })
 

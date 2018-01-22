@@ -29,13 +29,13 @@
             <div class="cellList">
                 <div class="cell" id="normalOrder" v-for="item in normalOrderList">
                     <div class="orderStatus">
-                        <span>待支付：{{item.price}}元</span>
+                        <span>待支付：{{item.total_amount}}元</span>
                         <span>{{item.status}}</span>
                     </div>
                     <div class="content">
-                        <img src="../images/cellAvatar.png">
+                        <img :src="item.guide_avatar">
                         <div class="info">
-                            <span> 途友 {{item.name}}</span>
+                            <span> 途友 {{item.guide_name}}</span>
                             <span > {{item.time}}</span>
                             <span >{{item.location}}</span>
                         </div>
@@ -102,27 +102,108 @@
        el:'.container',
        data:{
 //           toolSelected:'#li',
-           normalOrderList:[{
-             name:'球球',
-             time:'2017-12-12 08:00',
-             location:'雷锋塔下',
-             price:'198.0',
-             status:'未付款'
-
-           }],
-           managerOrderList:[{
-               leaveTime:'2017-12-12 08:00',
-               fromLocation:'杭州',
-               toLocation:'三亚',
-               price:'198.0',
-               status:'未付款'
-           }]
+           normalOrderList:[],
+           managerOrderList:[]
        },
        computer:function () {
 
 
        }
    })
+
+    var guide_applications = [{
+        applicant:{},
+        guide :{cover_photo: "guide/coverPhoto/qiuqiu_photoCover.jpg",name:"球球",gender:0,total_amount:"198.00",level:5,total_serving_orders:20},
+        location:"浙江省杭州市江干区景昙路18-26号",
+        package : "A" ,
+        start_time : "2018-01-20 09:01:00",
+        status : 100,
+        total_amount : "198.00",
+        user_request : null,
+
+    },{
+        applicant:{},
+        guide :{cover_photo: "guide/coverPhoto/qiuqiu_photoCover.jpg",name:"球球",gender:0,hourl_rate:"198.00",level:5,total_serving_orders:20},
+        location:"浙江省杭州市江干区景昙路18-26号",
+        package : "A" ,
+        start_time : "2018-01-20 09:01:00",
+        status : 100,
+        total_amount : "198.00",
+        user_request : null
+    }];
+    function handleData(responseData){
+
+        var orderList = new Array();
+        responseData.forEach(function (value,index, arr) {
+
+            var arrDict = new Array();
+            arrDict['guide_avatar']  = "http://ovc3poav6.bkt.clouddn.com/"+value.guide.cover_photo
+            arrDict['guide_name'] = value.guide.name
+            arrDict['guide_gender'] = value.guide.gender
+            arrDict['guide_level'] = value.guide.level
+            arrDict['guide_hourl_rate'] = value.guide.hourl_rate
+            arrDict['guide_total_serving_orders'] = value.guide.total_serving_orders
+
+            arrDict['time'] = value.start_time
+            if (value.package == 'A'){
+                arrDict['package'] == '套餐A（至少30张原图+10张精修）'
+            }else{
+                arrDict['package'] == '套餐B（至少50张原图+15张精修）'
+            }
+
+            switch (value.status){
+                case 100:{
+                    arrDict["status"] = "未付款"
+                    break
+                }
+                case 300:{
+                    arrDict["status"] = "等待导游接单"
+                    break;
+                }
+                case 400:{
+                    arrDict["status"] = "等待出行"
+                    break;
+                }
+                case 401:{
+                    arrDict["status"] = "订单进行中"
+                    break;
+                }
+                case 510:{
+                    arrDict["status"] = "订单已取消"
+                    break;
+                }
+                case 500:{
+                    arrDict["status"] = "订单等待评价"
+                    break;
+                }
+                case 600:{
+                    arrDict["status"] = "订单已评价"
+                    break;
+                }
+                case 410:{
+                    arrDict["status"] = "订单已拒绝"
+                    break;
+                }
+                case 501:{
+                    arrDict["status"] = "投诉处理中"
+                    break;
+                }
+                case 10:{
+                    arrDict["status"] = '已申诉'
+                    break;
+                }
+            }
+
+            arrDict['location'] = value.location
+            arrDict['total_amount'] = value.total_amount
+            arrDict['user_request'] = value.user_request
+
+            vm.normalOrderList.push(arrDict)
+        })
+    }
+    handleData(guide_applications)
+
+
 
 //    导航到订单详情
     $('#normalOrder').on('click',function () {

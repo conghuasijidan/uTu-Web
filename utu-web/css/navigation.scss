@@ -75,6 +75,13 @@ body{
   color: #333;
   width: 60px;
   margin-left: 5px;
+
+}
+.line-limit-length {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .avatarimg{
   width: 36px;
